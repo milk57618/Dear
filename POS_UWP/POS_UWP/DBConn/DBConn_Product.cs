@@ -102,6 +102,17 @@ namespace POS_UWP.DBConn
             }
         }
 
+        /*모든 Product 테이블 리스트 목록을 불러오는 함수*/
+        public List<Product> GetAllProduct()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                List<Product> myCollection = dbConn.Query<Product>("select * from Product");
+
+                return myCollection;
+            }
+        }
+
         /*Product 데이터베이스 값 삭제하는 함수*/
         public void DeleteProduct(int proId)
         {

@@ -34,5 +34,10 @@ namespace POS_UWP.Views
                 await md.ShowAsync();
             }
         }
+
+        private void btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 }

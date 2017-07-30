@@ -1,4 +1,3 @@
-WinMetadata\Windows.winmd
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
@@ -21,3 +20,4 @@ rsc\rank_crown_2.png
 rsc\rank_crown_3.png
 rsc\switch_off.png
 rsc\switch_on.png
+WinMetadata\Windows.winmd

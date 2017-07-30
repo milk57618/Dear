@@ -10,16 +10,13 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image Source="/rsc/BlurredBG_1.png"/>
         <Border Margin="164,74,166,71" Background="#FBFBFB" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
-        <ComboBox   BorderBrush="#DBDBDB" BorderThickness="2" x:Name="cb_Position" HorizontalAlignment="Left" Height="46" Margin="240,168,0,0" VerticalAlignment="Top" Width="306" SelectionChanged="cb_Position_SelectionChanged">
-
+        <ComboBox   BorderBrush="#DBDBDB" BorderThickness="2" x:Name="cb_Position" HorizontalAlignment="Left" Height="35" Margin="298,179,0,0" VerticalAlignment="Top" Width="246" SelectionChanged="cb_Position_SelectionChanged">
             <ComboBoxItem Tag="Orner">사장님</ComboBoxItem>
             <ComboBoxItem Tag="Manager">매니저</ComboBoxItem>
             <ComboBoxItem Tag="Staff">직원</ComboBoxItem>
-
         </ComboBox>
 
-        <ComboBox x:Name="cb_Name" HorizontalAlignment="Left" Height="46" Margin="240,257,0,0" VerticalAlignment="Top" Width="306"   BorderBrush="#DBDBDB" BorderThickness="2">
-
+        <ComboBox x:Name="cb_Name" HorizontalAlignment="Left" Height="35" Margin="298,236,0,0" VerticalAlignment="Top" Width="246" BorderBrush="#DBDBDB" BorderThickness="2">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Width="Auto" Height="Auto">
@@ -27,17 +24,15 @@
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
-
         </ComboBox>
 
-        <Button x:Name="btn_Change" Content="관리자 변경" HorizontalAlignment="Left" Height="34" Margin="214,331,0,0" VerticalAlignment="Top" Width="351" Click="btn_Change_Click" Style="{StaticResource BlueButton}"  Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"  />
-        <TextBlock HorizontalAlignment="Left" Height="34" Margin="240,129,0,0" TextWrapping="Wrap" Text="직위" VerticalAlignment="Top" Width="116"  FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939"/>
-        <TextBlock HorizontalAlignment="Left" Height="34" Margin="240,222,0,0" TextWrapping="Wrap" Text="이름" VerticalAlignment="Top" Width="116"  FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="240,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Text="직위" FontSize="20" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="240,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Text="이름" FontSize="20" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939"/>
+        <Button x:Name="btn_Change" Content="관리자 변경" HorizontalAlignment="Left" Height="39" Margin="340,294,0,0" VerticalAlignment="Top" Width="140" Click="btn_Change_Click" Style="{StaticResource BlueButton}"  Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"  />
         <Button x:Name="btn_Close" HorizontalAlignment="Left" Height="39" Margin="547,112,0,0" VerticalAlignment="Top" Width="42" Click="btn_Close_Click" Style="{StaticResource GrayButton}"  Foreground="White" >
             <Button.Content>
                 <SymbolIcon Symbol="Cancel"></SymbolIcon>
             </Button.Content>
         </Button>
-
     </Grid>
 </Page>

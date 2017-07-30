@@ -10,16 +10,16 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image Source="/rsc/BlurredBG_1.png"/>
         <Border Margin="164,74,166,71" Background="#FBFBFB" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
-        <TextBlock x:ConnectionId='1' x:Name="tb_id" HorizontalAlignment="Left" Height="32" Margin="238,213,0,0" TextWrapping="Wrap" Text="아이디" VerticalAlignment="Top" Width="76" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939" />
-        <TextBlock x:ConnectionId='2' x:Name="tb_pw" HorizontalAlignment="Left" Height="32" Margin="238,266,0,0" TextWrapping="Wrap" Text="비밀번호" VerticalAlignment="Top" Width="76" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939" />
-        <TextBox x:ConnectionId='3'   BorderBrush="#DBDBDB" BorderThickness="2" x:Name="txtbox_id" HorizontalAlignment="Left" Height="27" Margin="340,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="249" Foreground="#393939"/>
-        <Button x:ConnectionId='4' x:Name="btn_OK" Content="개점" HorizontalAlignment="Left" Height="39" Margin="238,324,0,0" VerticalAlignment="Top" Width="351"                      Style="{StaticResource BlueButton}"  Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" />
-        <Button x:ConnectionId='5' x:Name="btn_Close"  HorizontalAlignment="Left" Height="34" Margin="571,102,0,0" VerticalAlignment="Top" Width="37"                         Style="{StaticResource GrayButton}" Foreground="White" >
+        <TextBlock x:ConnectionId='1' x:Name="tb_id" HorizontalAlignment="Left" Height="32" Margin="206,191,0,0" TextWrapping="Wrap" Text="아이디" VerticalAlignment="Top" Width="84" FontSize="20" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939" TextAlignment="Right" />
+        <TextBlock x:ConnectionId='2' x:Name="tb_pw" HorizontalAlignment="Left" Height="32" Margin="208,242,0,0" TextWrapping="Wrap" Text="비밀번호" VerticalAlignment="Top" Width="84" FontSize="20" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Foreground="#393939" TextAlignment="Right" />
+        <TextBox x:ConnectionId='3'   BorderBrush="#DBDBDB" BorderThickness="2" x:Name="txtbox_id" HorizontalAlignment="Left" Height="37" Margin="314,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="233" Foreground="#393939"/>
+        <Button x:ConnectionId='4' x:Name="btn_OK" Content="개점" HorizontalAlignment="Left" Height="39" Margin="340,294,0,0" VerticalAlignment="Top" Width="140"                      Style="{StaticResource BlueButton}"  Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" />
+        <Button x:ConnectionId='5' x:Name="btn_Close" HorizontalAlignment="Left" Height="39" Margin="547,112,0,0" VerticalAlignment="Top" Width="42"                         Style="{StaticResource GrayButton}"  Foreground="White" >
             <Button.Content>
                 <SymbolIcon Symbol="Cancel"></SymbolIcon>
             </Button.Content>
         </Button>
-        <PasswordBox x:ConnectionId='6'   BorderBrush="#DBDBDB" BorderThickness="2" x:Name="pb_pw" HorizontalAlignment="Left" Height="32" Margin="340,263,0,0" VerticalAlignment="Top" Width="249" Foreground="#393939"/>
+        <PasswordBox x:ConnectionId='6'   BorderBrush="#DBDBDB" BorderThickness="2" x:Name="pb_pw" HorizontalAlignment="Left" Height="37" Margin="314,235,0,0" VerticalAlignment="Top" Width="233" Foreground="#393939"/>
 
     </Grid>
 </Page>

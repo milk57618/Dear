@@ -9,15 +9,8 @@
 
     <Grid Background="#FBFBFB" Width="800" Height="480" >
         <Image Source="/rsc/logo.png"  Margin="12,13,675,422"/>
-        <Button x:ConnectionId='1' x:Name="btn_SalesSearch" Content="판매 조회" HorizontalAlignment="Left" Height="41" Margin="131,14,0,0" VerticalAlignment="Top" Width="101"                               Style="{StaticResource OrangeButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='2' x:Name="btn_SalesHistory" Content="매출 내역" HorizontalAlignment="Left" Height="41" Margin="237,14,0,0" VerticalAlignment="Top" Width="101"                                Style="{StaticResource GrayButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='3' x:Name="btn_Setting"  HorizontalAlignment="Left" Height="41" Margin="343,14,0,0" VerticalAlignment="Top" Width="101"                           Style="{StaticResource OrangeButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
-            <Button.Content>
-                <SymbolIcon Symbol="Setting"></SymbolIcon>
-            </Button.Content>
-        </Button>
-
-
+        <Image Source="/rsc/money.png"  Margin="26,251,716,184"/>
+        
         <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
              VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Visible"
                       HorizontalAlignment="Left" Height="185" Margin="28,63,0,0" VerticalAlignment="Top" Width="416" BorderBrush="#DBDBDB" BorderThickness="1">
@@ -137,70 +130,23 @@
                 </ListView.Template>
             </ListView>
         </ScrollViewer>
-        <Button x:ConnectionId='4' x:Name="btn_Close"  HorizontalAlignment="Left" Height="41" Margin="752,10,0,0" VerticalAlignment="Top" Width="42"                         Style="{StaticResource GrayButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
-            <Button.Content>
-                <SymbolIcon Symbol="Cancel"></SymbolIcon>
-            </Button.Content>
-        </Button>
-        <Button x:ConnectionId='5' x:Name="btn_Manage" HorizontalAlignment="Left" Height="41" Margin="464,13,0,0" VerticalAlignment="Top" Width="42"                          Style="{StaticResource RedButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
-            <Button.Content>
-                <SymbolIcon Symbol="People"></SymbolIcon>
-            </Button.Content>
-        </Button>
-        <TextBox x:ConnectionId='6' x:Name="tb_Sum" HorizontalAlignment="Left" Height="28" Margin="181,289,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="181" CharacterSpacing="70" InputScope="Default"  BorderBrush="#DBDBDB" BorderThickness="2"/>
-        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="27" Margin="27,278,0,0" TextWrapping="Wrap" Text="총금액" VerticalAlignment="Top" Width="67" />
+        <TextBox x:ConnectionId='1' x:Name="tb_Sum" HorizontalAlignment="Left" Height="28" Margin="181,289,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="181" CharacterSpacing="70" InputScope="Default"  BorderBrush="#DBDBDB" BorderThickness="2"/>
+        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="24" Margin="27,303,0,0" TextWrapping="Wrap" Text="총  금액 " VerticalAlignment="Top" Width="67" TextAlignment="Right" />
         <TextBlock  Foreground="#393939" FontSize="12" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"  HorizontalAlignment="Left" Height="17" Margin="517,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"   >
             <Run Text="manager"/>
             <Run Text=" :"/>
         </TextBlock>
-        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"  HorizontalAlignment="Left" Height="27" Margin="27,315,0,0" TextWrapping="Wrap" Text="할인금액" VerticalAlignment="Top" Width="70" />
-        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="27" Margin="27,353,0,0" TextWrapping="Wrap" Text="받을금액" VerticalAlignment="Top" Width="72" />
-        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="27" Margin="27,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Text="받은금액" />
-        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="27" Margin="27,433,0,0" TextWrapping="Wrap" Text="거스름돈" VerticalAlignment="Top" Width="72"  />
-        <TextBlock x:ConnectionId='7'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Total" HorizontalAlignment="Left" Height="27" Margin="108,278,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
-        <TextBlock x:ConnectionId='8'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Discount" HorizontalAlignment="Left" Height="27" Margin="108,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
-        <TextBlock x:ConnectionId='9'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Receive" HorizontalAlignment="Left" Height="27" Margin="108,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
-        <TextBlock x:ConnectionId='10'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Received" HorizontalAlignment="Left" Height="27" Margin="108,391,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
-        <TextBlock x:ConnectionId='11'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Change" HorizontalAlignment="Left" Height="27" Margin="108,432,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
-        <Button x:ConnectionId='12' x:Name="btn_CancelAll" Content="전체취소" HorizontalAlignment="Left" Height="27" Margin="185,254,0,0" VerticalAlignment="Top" Width="76" FontSize="12"                             Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='13' x:Name="btn_CancelSelect" Content="선택취소" HorizontalAlignment="Left" Height="27" Margin="269,254,0,0" VerticalAlignment="Top" Width="76" FontSize="12"                                Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" />
-        <Button x:ConnectionId='14' x:Name="btn_Plus"  HorizontalAlignment="Left" Height="27" Margin="353,254,0,0" VerticalAlignment="Top" Width="43"                        Style="{StaticResource RedButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
-            <Button.Content>
-                <SymbolIcon Symbol="Add" Margin="0.4,0,-0.4,0.2"></SymbolIcon>
-            </Button.Content>
-
-        </Button>
-        <Button x:ConnectionId='15' x:Name="btn_Minus"  HorizontalAlignment="Left" Height="27" Margin="401,254,0,0" VerticalAlignment="Top" Width="43"                         Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
-            <Button.Content>
-                <SymbolIcon Symbol="Remove"></SymbolIcon>
-            </Button.Content>
-
-        </Button>
-        <Button x:ConnectionId='16' x:Name="btn_Backspace"  HorizontalAlignment="Left" Height="27" Margin="367,290,0,0" VerticalAlignment="Top" Width="76"                             Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
-            <Button.Content>
-                <SymbolIcon Symbol="Back"></SymbolIcon>
-            </Button.Content>
-        </Button>
-        <Button x:ConnectionId='17' x:Name="btn_PercentDC" Content="%할인" HorizontalAlignment="Left" Height="27" Margin="367,323,0,0" VerticalAlignment="Top" Width="76" FontSize="12"                             Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='18' x:Name="btn_Enter" Content="입력" HorizontalAlignment="Left" Height="71" Margin="367,389,0,0" VerticalAlignment="Top" Width="76"                         Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" />
-        <Button x:ConnectionId='19' x:Name="btn_One" Content="1" HorizontalAlignment="Left" Height="27" Margin="181,334,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                       Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='20' x:Name="btn_Cash" Content="현금결제" HorizontalAlignment="Left" Height="43" Margin="458,413,0,0" VerticalAlignment="Top" Width="103" FontSize="12"                        Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='21' x:Name="btn_Card" Content="카드결제" HorizontalAlignment="Left" Height="42" Margin="573,414,0,0" VerticalAlignment="Top" Width="101" FontSize="12"                        Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='22' x:Name="btn_Compound" Content="복합결제" HorizontalAlignment="Left" Height="42" Margin="686,415,0,0" VerticalAlignment="Top" Width="102" FontSize="12"                            Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='23' x:Name="btn_Two" Content="2" HorizontalAlignment="Left" Height="27" Margin="238,334,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                       Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='24' x:Name="btn_Three" Content="3" HorizontalAlignment="Left" Height="27" Margin="298,334,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                         Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='25' x:Name="btn_Four" Content="4" HorizontalAlignment="Left" Height="27" Margin="181,367,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                        Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='26' x:Name="btn_Five" Content="5" HorizontalAlignment="Left" Height="27" Margin="238,367,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                        Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='27' x:Name="btn_Six" Content="6" HorizontalAlignment="Left" Height="27" Margin="298,367,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                       Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='28' x:Name="btn_Seven" Content="7" HorizontalAlignment="Left" Height="27" Margin="181,400,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                         Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='29' x:Name="btn_Eight" Content="8" HorizontalAlignment="Left" Height="27" Margin="238,400,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                         Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='30' x:Name="btn_Nine" Content="9" HorizontalAlignment="Left" Height="27" Margin="298,400,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                        Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='31' x:Name="btn_WonDC" Content="\할인" HorizontalAlignment="Left" Height="27" Margin="367,356,0,0" VerticalAlignment="Top" Width="76" FontSize="12"                         Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='32' x:Name="btn_Zero" Content="0" HorizontalAlignment="Left" Height="27" Margin="181,433,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                        Style="{StaticResource GrayButton}" Foreground="White"  FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='33' x:Name="btn_TwoZero" Content="00" HorizontalAlignment="Left" Height="27" Margin="238,433,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                           Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <Button x:ConnectionId='34' x:Name="btn_CL" Content="CL" HorizontalAlignment="Left" Height="27" Margin="298,433,0,0" VerticalAlignment="Top" Width="50" FontSize="12"                      Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"  HorizontalAlignment="Left" Height="23" Margin="27,337,0,0" TextWrapping="Wrap" Text="할인금액" VerticalAlignment="Top" Width="70" />
+        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="24" Margin="27,372,0,0" TextWrapping="Wrap" Text="받을금액" VerticalAlignment="Top" Width="72" />
+        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="25" Margin="27,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Text="받은금액" />
+        <TextBlock  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="26" Margin="27,444,0,0" TextWrapping="Wrap" Text="거스름돈" VerticalAlignment="Top" Width="72"  />
+        <TextBlock x:ConnectionId='2'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Total" HorizontalAlignment="Left" Height="24" Margin="108,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
+        <TextBlock x:ConnectionId='3'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Discount" HorizontalAlignment="Left" Height="23" Margin="108,337,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
+        <TextBlock x:ConnectionId='4'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Receive" HorizontalAlignment="Left" Height="25" Margin="108,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
+        <TextBlock x:ConnectionId='5'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Received" HorizontalAlignment="Left" Height="26" Margin="108,405,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
+        <TextBlock x:ConnectionId='6'  Foreground="#393939" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_Change" HorizontalAlignment="Left" Height="26" Margin="108,444,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"  />
         <TextBlock  Foreground="#393939"  FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="17" Margin="517,34,0,0" TextWrapping="Wrap" Text="현재 시간 :" VerticalAlignment="Top" Width="57" FontSize="11" />
-        <ComboBox x:ConnectionId='35'  x:Name="cb_Category" HorizontalAlignment="Left" Height="33" Margin="540,65,0,0" VerticalAlignment="Top" Width="249"                                                   BorderBrush="#DBDBDB" BorderThickness="2">
+        <ComboBox x:ConnectionId='7'  x:Name="cb_Category" HorizontalAlignment="Left" Height="33" Margin="540,65,0,0" VerticalAlignment="Top" Width="249"                                                   BorderBrush="#DBDBDB" BorderThickness="2">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Width="Auto" Height="Auto">
@@ -209,9 +155,9 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBlock x:ConnectionId='36' x:Name="tb_manager" HorizontalAlignment="Left" Height="21" Margin="584,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
-        <TextBlock x:ConnectionId='37' x:Name="tb_time"  HorizontalAlignment="Left" Height="21" Margin="584,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" />
-        <ListBox x:ConnectionId='38' x:Name="lb_Product" HorizontalAlignment="Left" Height="295" Margin="460,106,0,0" VerticalAlignment="Top" Width="330"                                                 BorderBrush="#DBDBDB" BorderThickness="1">
+        <TextBlock x:ConnectionId='8' x:Name="tb_manager" HorizontalAlignment="Left" Height="21" Margin="584,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
+        <TextBlock x:ConnectionId='9' x:Name="tb_time"  HorizontalAlignment="Left" Height="21" Margin="584,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" />
+        <ListBox x:ConnectionId='10' x:Name="lb_Product" HorizontalAlignment="Left" Height="295" Margin="460,106,0,0" VerticalAlignment="Top" Width="330"                                                 BorderBrush="#DBDBDB" BorderThickness="1">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="295" >
@@ -230,6 +176,60 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <TextBlock   Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" HorizontalAlignment="Left" Height="19" Margin="460,74,0,0" TextWrapping="Wrap" Text="카테고리선택" VerticalAlignment="Top" Width="75" FontSize="12"/>
+        <Button x:ConnectionId='11' x:Name="btn_SalesSearch" Content="판매 조회" HorizontalAlignment="Left" Height="41" Margin="131,14,0,0" VerticalAlignment="Top" Width="101"                               Style="{StaticResource OrangeButton}" Foreground="White" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='12' x:Name="btn_SalesHistory" Content="매출 내역" HorizontalAlignment="Left" Height="41" Margin="237,14,0,0" VerticalAlignment="Top" Width="101"                                Style="{StaticResource GrayButton}" Foreground="White" FontSize="17" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='13' x:Name="btn_Setting"  HorizontalAlignment="Left" Height="41" Margin="343,14,0,0" VerticalAlignment="Top" Width="101"                           Style="{StaticResource OrangeButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
+            <Button.Content>
+                <SymbolIcon Symbol="Setting"></SymbolIcon>
+            </Button.Content>
+        </Button>
+        <Button x:ConnectionId='14' x:Name="btn_Close"  HorizontalAlignment="Left" Height="41" Margin="747,14,0,0" VerticalAlignment="Top" Width="42"                         Style="{StaticResource GrayButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
+            <Button.Content>
+                <SymbolIcon Symbol="Cancel"></SymbolIcon>
+            </Button.Content>
+        </Button>
+        <Button x:ConnectionId='15' x:Name="btn_Manage" HorizontalAlignment="Left" Height="41" Margin="460,13,0,0" VerticalAlignment="Top" Width="42"                          Style="{StaticResource RedButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
+            <Button.Content>
+                <SymbolIcon Symbol="People"></SymbolIcon>
+            </Button.Content>
+        </Button>
+        <Button x:ConnectionId='16' x:Name="btn_CancelAll" Content="전체취소" HorizontalAlignment="Left" Height="27" Margin="181,254,0,0" VerticalAlignment="Top" Width="76" FontSize="13"                             Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='17' x:Name="btn_CancelSelect" Content="선택취소" HorizontalAlignment="Left" Height="27" Margin="265,254,0,0" VerticalAlignment="Top" Width="76" FontSize="13"                                Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" />
+        <Button x:ConnectionId='18' x:Name="btn_Plus"  HorizontalAlignment="Left" Height="27" Margin="349,254,0,0" VerticalAlignment="Top" Width="43"                        Style="{StaticResource RedButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
+            <Button.Content>
+                <SymbolIcon Symbol="Add" Margin="0.4,0,-0.4,0.2"></SymbolIcon>
+            </Button.Content>
+
+        </Button>
+        <Button x:ConnectionId='19' x:Name="btn_Minus"  HorizontalAlignment="Left" Height="27" Margin="400,254,0,0" VerticalAlignment="Top" Width="43"                         Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
+            <Button.Content>
+                <SymbolIcon Symbol="Remove"></SymbolIcon>
+            </Button.Content>
+
+        </Button>
+        <Button x:ConnectionId='20' x:Name="btn_Backspace"  HorizontalAlignment="Left" Height="31" Margin="367,290,0,0" VerticalAlignment="Top" Width="76"                             Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
+            <Button.Content>
+                <SymbolIcon Symbol="Back"></SymbolIcon>
+            </Button.Content>
+        </Button>
+        <Button x:ConnectionId='21' x:Name="btn_PercentDC" Content="%할인" HorizontalAlignment="Left" Height="29" Margin="368,330,0,0" VerticalAlignment="Top" Width="76" FontSize="14"                             Style="{StaticResource GrayButton}" Foreground="White"/>
+        <Button x:ConnectionId='22' x:Name="btn_Enter" Content="입력" HorizontalAlignment="Left" Height="65" Margin="368,401,0,0" VerticalAlignment="Top" Width="75" FontSize="17"                         Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" />
+        <Button x:ConnectionId='23' x:Name="btn_One" Content="1" HorizontalAlignment="Left" Height="29" Margin="182,330,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                       Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='24' x:Name="btn_Cash" Content="현금결제" HorizontalAlignment="Left" Height="52" Margin="460,413,0,0" VerticalAlignment="Top" Width="101" FontSize="17"                        Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='25' x:Name="btn_Card" Content="카드결제" HorizontalAlignment="Left" Height="51" Margin="573,414,0,0" VerticalAlignment="Top" Width="101" FontSize="17"                        Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='26' x:Name="btn_Compound" Content="복합결제" HorizontalAlignment="Left" Height="51" Margin="686,415,0,0" VerticalAlignment="Top" Width="103" FontSize="17"                            Style="{StaticResource BlueButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='27' x:Name="btn_Two" Content="2" HorizontalAlignment="Left" Height="29" Margin="244,330,0,0" VerticalAlignment="Top" Width="55" FontSize="15"                       Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='28' x:Name="btn_Three" Content="3" HorizontalAlignment="Left" Height="29" Margin="306,330,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                         Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='29' x:Name="btn_Four" Content="4" HorizontalAlignment="Left" Height="29" Margin="182,366,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                        Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='30' x:Name="btn_Five" Content="5" HorizontalAlignment="Left" Height="29" Margin="244,366,0,0" VerticalAlignment="Top" Width="55" FontSize="15"                        Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='31' x:Name="btn_Six" Content="6" HorizontalAlignment="Left" Height="29" Margin="306,366,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                       Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='32' x:Name="btn_Seven" Content="7" HorizontalAlignment="Left" Height="29" Margin="182,401,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                         Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='33' x:Name="btn_Eight" Content="8" HorizontalAlignment="Left" Height="29" Margin="244,401,0,0" VerticalAlignment="Top" Width="55" FontSize="15"                         Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='34' x:Name="btn_Nine" Content="9" HorizontalAlignment="Left" Height="29" Margin="306,401,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                        Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='35' x:Name="btn_WonDC" Content="\할인" HorizontalAlignment="Left" Height="29" Margin="368,366,0,0" VerticalAlignment="Top" Width="76" FontSize="14"                         Style="{StaticResource GrayButton}" Foreground="White"/>
+        <Button x:ConnectionId='36' x:Name="btn_Zero" Content="0" HorizontalAlignment="Left" Height="29" Margin="182,437,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                        Style="{StaticResource GrayButton}" Foreground="White"  FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='37' x:Name="btn_TwoZero" Content="00" HorizontalAlignment="Left" Height="29" Margin="244,437,0,0" VerticalAlignment="Top" Width="55" FontSize="15"                           Style="{StaticResource OrangeButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='38' x:Name="btn_CL" Content="CL" HorizontalAlignment="Left" Height="29" Margin="306,437,0,0" VerticalAlignment="Top" Width="56" FontSize="15"                      Style="{StaticResource GrayButton}" Foreground="White" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
     </Grid>
 </Page>
 

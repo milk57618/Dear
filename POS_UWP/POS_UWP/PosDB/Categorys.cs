@@ -19,6 +19,6 @@ namespace POS_UWP.PosDB
         public string category { get; set; }
 
         public Categorys() { }
-        public Categorys(int id,string cate) { Id = id; category = cate; }
+        public Categorys(int id, string cate) { Id = id; category = cate; }
     }
 }

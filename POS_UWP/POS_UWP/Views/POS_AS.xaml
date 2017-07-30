@@ -10,7 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image Source="/rsc/BlurredBG_1.png"/>
         <Border Margin="164,74,166,71" Background="#FBFBFB" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
-        <Button x:Name="btn_Send" Content="문의하기" HorizontalAlignment="Left" Height="48" Margin="457,336,0,0" VerticalAlignment="Top" Width="125" Style="{StaticResource BlueButton}"  Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:Name="btn_Send" Content="문의하기" HorizontalAlignment="Left" Height="48" Margin="457,336,0,0" VerticalAlignment="Top" Width="125" Style="{StaticResource BlueButton}"  Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Click="btn_Send_Click"/>
         <Button x:Name="btn_Close" HorizontalAlignment="Left" Height="34" Margin="545,105,0,0" VerticalAlignment="Top" Width="37" Click="btn_Close_Click" Style="{StaticResource GrayButton}">
             <Button.Content>
                 <SymbolIcon Symbol="Cancel" Margin="-1,0,0,0" Foreground="White"></SymbolIcon>

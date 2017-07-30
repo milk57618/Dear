@@ -117,9 +117,9 @@
         </ComboBox>
         <TextBox x:Name="txtbox_Name" HorizontalAlignment="Left" Height="32" Margin="145,367,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" BorderBrush="#DBDBDB" BorderThickness="2"/>
         <TextBox x:Name="txtbox_Price" HorizontalAlignment="Left" Height="35" Margin="145,418,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" BorderBrush="#DBDBDB" BorderThickness="2"/>
-        <TextBlock x:Name="tb_Category" HorizontalAlignment="Left" Height="27" Margin="47,79,0,0" TextWrapping="Wrap" Text="카테고리" VerticalAlignment="Top" Width="80" FontSize="18" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <TextBlock x:Name="tb_Name" HorizontalAlignment="Left" Height="31" Margin="53,373,0,0" TextWrapping="Wrap" Text="상품명" VerticalAlignment="Top" Width="69" TextAlignment="Right" FontSize="18" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <TextBlock x:Name="tb_price" HorizontalAlignment="Left" Height="31" Margin="53,425,0,0" TextWrapping="Wrap" Text="가격" VerticalAlignment="Top" Width="68" TextAlignment="Right" FontSize="18" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <TextBlock x:Name="tb_Category" HorizontalAlignment="Left" Height="27" Margin="47,77,0,0" TextWrapping="Wrap" Text="카테고리" VerticalAlignment="Top" Width="80" FontSize="19" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <TextBlock x:Name="tb_Name" HorizontalAlignment="Left" Height="31" Margin="53,373,0,0" TextWrapping="Wrap" Text="상품명" VerticalAlignment="Top" Width="69" TextAlignment="Right" FontSize="19" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <TextBlock x:Name="tb_price" HorizontalAlignment="Left" Height="31" Margin="53,425,0,0" TextWrapping="Wrap" Text="가격" VerticalAlignment="Top" Width="68" TextAlignment="Right" FontSize="19" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
         <Button x:Name="btn_Close"  HorizontalAlignment="Left" Height="41" Margin="748,10,0,0" VerticalAlignment="Top" Width="42" Click="btn_Close_Click" Style="{StaticResource GrayButton}" >
             <Button.Content>
                 <SymbolIcon Symbol="Cancel" Foreground="White"></SymbolIcon>
