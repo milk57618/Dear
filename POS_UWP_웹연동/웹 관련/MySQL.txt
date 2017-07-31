@@ -1,0 +1,46 @@
+create table seller
+(
+POSId int not null primary key auto_increment,
+UserId varchar(25) not null unique,
+UserPw varchar(50) not null,
+StoreName varchar(100),
+StoreAddress varchar(100),
+BeaconId varchar(70)
+);
+
+create table customer
+(
+UserId varchar(25) not null unique,
+UserPw varchar(50) not null,
+Money int
+);
+
+create table Product
+(
+PosId int,
+id int primary key,
+Category varchar(20),
+Name varchar(20),
+Price int,
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+create table SaleSearch(
+PosId int,
+SaleCount int primary key,
+Price int,
+Cash int,
+Card int,
+Id int,
+SaleTime varchar(30),
+Finished int,
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+create table AfterService
+(
+Time varchar(30),
+PosId int,
+Text varchar(1000),
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+);
