@@ -100,7 +100,7 @@ namespace POS_UWP.Views
             /*값이 중복되지 않으면 수정*/
             if (txtbox_Name.Text != "" && txtbox_Price.Text != "")
             {
-                currentpro.category = cb_select_cate;
+                currentpro.Category = cb_select_cate;
                 currentpro.Name = txtbox_Name.Text;
                 currentpro.Price = txtbox_Price.Text;
 

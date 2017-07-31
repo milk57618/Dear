@@ -50,7 +50,7 @@ namespace POS_UWP.Views
             //영수증 출력 후 시스템 종료
 
             /*시스템 즉시 종료*/
-            //ShutdownManager.BeginShutdown(ShutdownKind.Shutdown, TimeSpan.Zero);
+            ShutdownManager.BeginShutdown(ShutdownKind.Shutdown, TimeSpan.Zero);
         }
     }
 }

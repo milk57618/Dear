@@ -159,6 +159,7 @@
     <Compile Include="Views\POS_starting.xaml.cs">
       <DependentUpon>POS_starting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Web.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -267,6 +268,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>5.3.3</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>10.0.3</Version>
+    </PackageReference>
     <PackageReference Include="SQLite.Net-PCL">
       <Version>3.1.1</Version>
     </PackageReference>
@@ -280,6 +284,9 @@
     </SDKReference>
     <SDKReference Include="SQLite.UWP.2015, Version=3.19.3">
       <Name>SQLite for Universal Windows Platform %28SQLite.UWP.2015, Version=3.19.3%29</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsIoT, Version=10.0.15063.0">
+      <Name>Windows IoT Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

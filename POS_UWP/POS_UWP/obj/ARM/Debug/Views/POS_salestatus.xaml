@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="POS_UWP.Views.POS_salestatus"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:POS_UWP.Views"
+    xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="800" Height="480" >
+
+
+    <Grid Background="#FBFBFB">
+        <Image Source="/rsc/logo.png"  Margin="12,13,675,422"/>
+        <Border Margin="76,81,305,14" Background="White" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
+        <Border Margin="504,81,10,14" Background="White" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
+        <Image Source="/rsc/money.png"  Margin="102,409,662,40"/>
+        <Charting:Chart x:ConnectionId='1' x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Width="357" Height="244" Margin="101,112,0,0">
+            <Charting:LineSeries x:ConnectionId='16' 
+                Title="매출액"
+                Margin="0,0,12,0" 
+                IndependentValuePath="Date" 
+                DependentValuePath="Sum" 
+                IsSelectionEnabled="True"
+                                                              />
+        </Charting:Chart>
+        <Charting:Chart x:ConnectionId='2' x:Name="PieChart" HorizontalAlignment="Left"  VerticalAlignment="Top" 
+                        Width="277" Height="207" Margin="510,128,0,0" >
+            <Charting:PieSeries 
+                Margin="-4,-31,-5.8,-12.8" 
+                IndependentValuePath="Name" 
+                DependentValuePath="Count" 
+                IsSelectionEnabled="True"/>
+        </Charting:Chart>
+
+        <TextBlock x:ConnectionId='3'  x:Name ="tb_nowAvg" Text="최근 7일 매출액 총합" Margin="335.291,14.175,306.054,431.825" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" TextAlignment="Right"  Foreground="#393939" FontSize="15" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="1.127"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <TextBlock x:ConnectionId='4' FontSize="15"  Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_todayAvg" Text="오늘 매출액" Margin="380.204,46.753,306.269,399.247" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" TextAlignment="Right" >
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="1.127"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <Button x:ConnectionId='5' x:Name="btn_Close"  HorizontalAlignment="Left" Height="41" Margin="748,10,0,0" VerticalAlignment="Top" Width="42"                         Foreground="White"  FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" Style="{StaticResource GrayButton}">
+            <Button.Content>
+                <SymbolIcon Symbol="Cancel"></SymbolIcon>
+            </Button.Content>
+        </Button>
+        <TextBlock x:ConnectionId='6' x:Name="tb_select" Text="선택한 날 매출액" HorizontalAlignment="Left" Height="26" Margin="141,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144">
+        </TextBlock>
+        <Image Source="/rsc/rank_crown_1.png"  Margin="566,340,199,105" Height="35" Width="35"/>
+        <Image Source="/rsc/rank_crown_2.png"  Margin="566,379,199,66" Height="35" Width="35"/>
+        <Image Source="/rsc/rank_crown_3.png"  Margin="566,418,199,27" Height="35" Width="35"/>
+        <TextBox x:ConnectionId='7' Foreground="#393939" FontSize="15" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="txtbox_Top1" HorizontalAlignment="Left" Height="27" Margin="607,344,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
+        <TextBox x:ConnectionId='8' Foreground="#393939" FontSize="15" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="txtbox_Top2" HorizontalAlignment="Left" Height="27" Margin="607,383,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
+        <TextBox x:ConnectionId='9' Foreground="#393939" FontSize="15" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="txtbox_Top3" HorizontalAlignment="Left" Height="27" Margin="607,422,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132"  BorderThickness="1" BorderBrush="#FFE2E2E2"/>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="593,96,0,0" TextWrapping="Wrap" Text="인기 항목" VerticalAlignment="Top" Width="115"  Foreground="#393939" FontSize="24" FontFamily="ms-appx:/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="632,12,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Width="24"  Foreground="#393939" FontSize="15" />
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="632,47,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Width="24" Foreground="#393939" FontSize="15" />
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="403,412,0,0" TextWrapping="Wrap" Text="\" VerticalAlignment="Top" Width="24" Foreground="#393939" FontSize="15" />
+        <TextBlock x:ConnectionId='10' Foreground="#393939" FontSize="15" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_nowAvg_value" HorizontalAlignment="Left" Height="29" Margin="526,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94" TextAlignment="Right"/>
+        <TextBlock x:ConnectionId='11' Foreground="#393939" FontSize="15" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_todayAvg_value" HorizontalAlignment="Left" Height="29" Margin="526,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94" TextAlignment="Right"/>
+        <TextBlock x:ConnectionId='12' Foreground="#393939" FontSize="15" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" x:Name="tb_select_value" HorizontalAlignment="Left" Height="29" Margin="271,413,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextAlignment="Right"/>
+        <Button x:ConnectionId='13' x:Name="btn_Week" Content="W" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,81,0,0" Width="53" Height="109"                        Style="{StaticResource BlueButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='14' x:Name="btn_Month" Content="M" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,204,0,0" Width="53" Height="123"                         Style="{StaticResource OrangeButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='15' x:Name="btn_Year" Content="Y" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,339,0,0" Width="53" Height="128"                        Style="{StaticResource GrayButton}" Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+    </Grid>
+</Page>
+

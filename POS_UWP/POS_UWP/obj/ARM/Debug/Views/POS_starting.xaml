@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="POS_UWP.Views.POS_starting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:POS_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="480" Width="800">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image Source="/rsc/BlurredBG_1.png"/>
+        <Border Margin="164,74,166,71" Background="#FBFBFB" BorderThickness="1" BorderBrush="#FFE2E2E2"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="185,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" Text="준비금" Foreground="#393939" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" TextAlignment="Right"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="185,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" Text="가등록준비금" Foreground="#393939" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold" TextAlignment="Right" />
+        <TextBox x:ConnectionId='1' x:Name="txtbox_StartPrice" HorizontalAlignment="Left" Height="35" Margin="302,179,0,0" VerticalAlignment="Top" Width="246"  BorderBrush="#DBDBDB" BorderThickness="2"  Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <TextBox x:ConnectionId='2' x:Name="txtbox_YesterdayPrice" HorizontalAlignment="Left" Height="35" Margin="302,236,0,0" VerticalAlignment="Top" Width="246"  BorderBrush="#DBDBDB" BorderThickness="2"  Foreground="#393939"  FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='3' x:Name="btn_OK" Content="개점" HorizontalAlignment="Left" Height="39" Margin="340,294,0,0" VerticalAlignment="Top" Width="140"                      Style="{StaticResource BlueButton}"  Foreground="White" FontSize="18" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <Button x:ConnectionId='4' x:Name="btn_Close" HorizontalAlignment="Left" Height="39" Margin="547,112,0,0" VerticalAlignment="Top" Width="42"                         Style="{StaticResource GrayButton}"  Foreground="White" >
+            <Button.Content>
+                <SymbolIcon Symbol="Cancel"></SymbolIcon>
+            </Button.Content>
+        </Button>
+    </Grid>
+</Page>
+

@@ -3,8 +3,6 @@ using System.Dynamic;
 using System.Net.Http;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using POS_UWP.DBConn;
-using POS_UWP.PosDB;
 using System.Collections.Generic;
 
 namespace POS_UWP.Views
@@ -30,19 +28,9 @@ namespace POS_UWP.Views
         
         private void btn_Send_Click(object sender, RoutedEventArgs e)
         {
-            DBConn_Product dbp = new DBConn_Product();
-            List<Product> productList = dbp.GetAllProduct();
-
-            Uri requestUri = new Uri("http://localhost/actionTest.php");
-            dynamic dynamicJson = new ExpandoObject();
-            Random r = new Random();
-
-            dynamicJson.product = productList;
-
-            string json = "";
-            json = Newtonsoft.Json.JsonConvert.SerializeObject(dynamicJson);
-            var objClint = new HttpClient();
-            //HttpResponseMessage respon = objClint.PostAsync(requestUri, new StringContent(json, System.Text.Encoding.UTF8, "application/json")).Result;
+            Web web = new Web();
+            web.sendAS(DateTime.Now.ToString("yy/MM/dd HH:mm:ss"), POS_main.PosId, txtbox_Content.Text);
+            txtbox_Content.Text = "";
         }
     }
 }

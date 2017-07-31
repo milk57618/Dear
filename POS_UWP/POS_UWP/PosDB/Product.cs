@@ -15,7 +15,7 @@ namespace POS_UWP.PosDB
         [SQLite.PrimaryKey]
         public int Id { get; set; }
 
-        public string category { get; set; }  //left join걸어줘야함
+        public string Category { get; set; }
 
         [SQLite.Unique]
         public string Name { get; set; }
@@ -26,9 +26,9 @@ namespace POS_UWP.PosDB
         public Product(int id, string category, string name, string price)
         {
             Id = id;
-            this.category = category;
-            this.Name = name;
-            this.Price = price;
+            Category = category;
+            Name = name;
+            Price = price;
         }
     }
 }
