@@ -1,1 +1,0 @@
-C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\POS_UWP.csproj;arm
