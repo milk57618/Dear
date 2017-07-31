@@ -22,12 +22,13 @@
         <AppBarToggleButton x:Name="abtn_Voice" HorizontalAlignment="Left" Height="34" Icon="Accept" Label="voice" Margin="704,436,0,0" VerticalAlignment="Top" Width="86"/>
         <TextBlock x:Name="tb_Manager1" HorizontalAlignment="Left" Height="31" Margin="611,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
         <TextBlock x:Name="tb_Time" HorizontalAlignment="Left" Height="31" Margin="611,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
-        <TextBlock x:Name="tb_PosNum" HorizontalAlignment="Left" Height="31" Margin="611,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
+        <TextBlock x:Name="tb_PosNum" HorizontalAlignment="Left" Height="31" Margin="611,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Foreground="#393939" FontFamily="/font/NanumSquareB.ttf#NanumSquare Bold"/>
         <Button x:Name="btn_Manage" HorizontalAlignment="Left" Height="41" Margin="460,13,0,0" VerticalAlignment="Top" Width="42" Click="btn_Manage_Click" Foreground="White" Style="{StaticResource OrangeButton}">
             <Button.Content>
                 <SymbolIcon Symbol="People"></SymbolIcon>
             </Button.Content>
         </Button>
+        <Button x:Name ="btn_test" Content="테스트용 버튼" HorizontalAlignment="Left" Height="31" Margin="341,87,0,0" VerticalAlignment="Top" Width="149" Click="btn_test_Click"/>
 
     </Grid>
 </Page>

@@ -2,16 +2,18 @@
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using POS_UWP.DBConn;
+using POS_UWP.PosDB;
+using System.Collections.Generic;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Windows.UI.Xaml.Input;
 
 namespace POS_UWP.Views
 {
 
     public sealed partial class POS_login : Page
     {
-        /*임시 할당한 아이디, 비밀번호*/
-        static string RootID = "test";
-        static string RootPW = "1234";
-
         public POS_login()
         {
             this.InitializeComponent();
@@ -22,26 +24,67 @@ namespace POS_UWP.Views
             Frame.GoBack();
         }
 
-        private async void btn_OK_Click(object sender, RoutedEventArgs e)
+        // 로그인 응답값을 Json 형태로 받은 후 객체로 처리하기 위한 클래스
+        private class Login_Response
         {
-            /*아이디, 비밀번호 확인*/
-            if (txtbox_id.Text == RootID && pb_pw.Password == RootPW)
-            {
-                txtbox_id.Text = "";
-                pb_pw.Password = "";
+            public int PosId { get; set; }
+            public string StoreName { get; set; }
+        }
 
-                Frame.Navigate(typeof(POS_starting));
+        private async void login()
+        {
+            if (txtbox_id.Text == "")
+            {
+                MessageDialog messageDialog = new MessageDialog("아이디를 입력해주세요.");
+                await messageDialog.ShowAsync();
+                return;
             }
-            else
+            else if (pb_pw.Password == "")
+            {
+                MessageDialog messageDialog = new MessageDialog("비밀번호를 입력해주세요.");
+                await messageDialog.ShowAsync();
+                return;
+            }
+            Web web = new Web();
+            HttpResponseMessage respon = web.login(txtbox_id.Text, pb_pw.Password);
+
+            /* 웹서버 컴퓨터의 mysql이 연결이 안되면 -2, 존재하지 않는 계정이면 -1, 존재하는 계정이면 그 계정의 PosId */
+            String strRespon = await respon.Content.ReadAsStringAsync();
+            Login_Response objRespon = JsonConvert.DeserializeObject<Login_Response>(strRespon);
+            int PosId = objRespon.PosId;
+
+            /* 아이디, 비밀번호 확인 */
+            if (PosId == -1)
             {
                 MessageDialog messageDialog = new MessageDialog("일치하는 아이디나 비밀번호가 존재하지 않습니다.");
                 await messageDialog.ShowAsync();
             }
+            else if (PosId == -2)
+            {
+                MessageDialog messageDialog = new MessageDialog("에러 발생!");
+                await messageDialog.ShowAsync();
+            }
+            else
+            {
+                txtbox_id.Text = "";
+                pb_pw.Password = "";
+                POS_main.PosId = PosId;
+
+                Frame.Navigate(typeof(POS_starting));
+            }
         }
 
-        private void pb_pw_PasswordChanged(System.Object sender, RoutedEventArgs e)
+        private void login_keyEvent(object sender, KeyRoutedEventArgs e)
         {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                login();
+            }
+        }
 
+        private void btn_OK_Click(object sender, RoutedEventArgs e)
+        {
+            login();
         }
     }
 }

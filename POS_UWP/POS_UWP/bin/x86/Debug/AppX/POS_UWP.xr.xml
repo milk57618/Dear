@@ -73,6 +73,7 @@
       <RootProperty Name="Content" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="IsTapEnabled" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -316,6 +317,7 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="IsTapEnabled" />
       <RootProperty Name="UseLayoutRounding" />
       <RootProperty Name="RenderTransform" />
     </RootType>
@@ -406,6 +408,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="POS_UWP.Views.POS_login" />
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarToggleButton">

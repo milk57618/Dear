@@ -9,6 +9,8 @@ namespace POS_UWP.Views
     {
         public static string managerName = "";
         public static int managerID = 0;
+        public static int PosId = -1;
+        public static string strPosId = "";
 
         DispatcherTimer Timer = new DispatcherTimer();
 
@@ -39,6 +41,22 @@ namespace POS_UWP.Views
             {
                 btn_Login.IsEnabled = false;
             }
+
+            if (PosId != -1)
+            {
+                strPosId = setFiveLength(PosId);
+                tb_PosNum.Text = strPosId;
+                int b = 1;
+            }
+        }
+        private string setFiveLength(int number)
+        {
+            string str = number.ToString();
+            while(str.Length < 5)
+            {
+                str = "0" + str;
+            }
+            return str;
         }
         private void Timer_Tick(object sender, object e)
         {
@@ -90,6 +108,18 @@ namespace POS_UWP.Views
         private void btn_SaleState_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(POS_salestatus));
+        }
+
+        private async void btn_test_Click(object sender, RoutedEventArgs e)
+        {
+            if (POS_starting.openCheck == false)
+            {
+                MessageDialog md = new MessageDialog("개점 하고 누르세요");
+                await md.ShowAsync();
+                return;
+            }
+            Web web = new Web();
+            web.sendAllData();
         }
     }
 }
