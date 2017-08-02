@@ -19,7 +19,7 @@ namespace POS_UWP.DBConn
             dbConn.CreateTable<Member>();
         }
 
-        /*정보수정을 통해 디비를 업데이트 하는 함수*/
+        /*정보수정을 통해서 디비를 업데이트 하는 함수*/
         public void UpdateMember(String Name, String Phone, string posi, int Id, string Pay)
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
