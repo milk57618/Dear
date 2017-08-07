@@ -305,3 +305,145 @@ C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\obj\x86\Debug\FxResources.System.Co
 C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\obj\x86\Debug\FxResources.System.ComponentModel.TypeConverter.SR.resw
 C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\obj\x86\Debug\FxResources.System.Runtime.InteropServices.RuntimeInformation.SR.resw
 C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\obj\x86\Debug\FxResources.System.Runtime.Serialization.Formatters.SR.resw
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\POS_UWP.csprojResolveAssemblyReference.cache
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\App.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\App.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\MainPage.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_AS.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_AS.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_category.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_category.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_commute.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_commute.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_compound.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_compound.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_finishing.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_finishing.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_login.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_login.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_main.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_main.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_manager.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_manager.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_sale.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_sale.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salesearch.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salesearch.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salestatus.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salestatus.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_setting.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_setting.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_starting.g.i.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_starting.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\App.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\MainPage.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\MyButtonStyle.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_AS.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_category.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_commute.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_compound.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_finishing.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_login.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_main.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_manager.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_sale.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salesearch.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salestatus.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_setting.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_starting.xaml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\App.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\MainPage.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\MyButtonStyle.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_AS.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_category.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_commute.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_compound.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_finishing.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_login.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_main.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_manager.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_sale.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salesearch.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_salestatus.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_setting.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\Views\POS_starting.xbf
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\POS_UWP.exe
+C:\Users\milk5\Documents\카카오톡 받은 파일\POS_UWP_222\POS_UWP\obj\x86\Debug\POS_UWP.pdb
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\POS_UWP.csprojResolveAssemblyReference.cache
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\App.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\App.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\MainPage.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\MainPage.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_AS.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_AS.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_category.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_category.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_commute.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_commute.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_compound.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_compound.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_finishing.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_finishing.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_login.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_login.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_main.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_main.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_manager.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_manager.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_sale.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_sale.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salesearch.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salesearch.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salestatus.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salestatus.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_setting.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_setting.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_starting.g.i.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_starting.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\XamlTypeInfo.g.cs
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\MyButtonStyle.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\App.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\MainPage.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_AS.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_category.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_commute.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_compound.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_finishing.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_login.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_main.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_manager.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_sale.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salesearch.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salestatus.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_setting.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_starting.xaml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\MyButtonStyle.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\App.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\MainPage.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_adminsetting.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_AS.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_category.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_commute.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_compound.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_finishing.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_login.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_main.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_manager.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_sale.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salesearch.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_salestatus.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_setting.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\Views\POS_starting.xbf
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\XamlSaveStateFile.xml
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\POS_UWP.exe
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\POS_UWP.pdb

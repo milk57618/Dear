@@ -1,7 +1,14 @@
-﻿using System;
+﻿using ApiAiSDK;
+using ApiAiSDK.Model;
+using System;
+using System.Diagnostics;
+using Windows.Media.SpeechSynthesis;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 
 namespace POS_UWP.Views
 {
@@ -12,12 +19,22 @@ namespace POS_UWP.Views
         public static int PosId = -1;
         public static string strPosId = "";
 
+        private SpeechSynthesizer speechSynthesizer;
+        private AIService AIService => (Application.Current as App)?.AIService;
+        private volatile bool recognitionActive = false;
+
         DispatcherTimer Timer = new DispatcherTimer();
 
         public POS_main()
         {
             this.InitializeComponent();
             DataContext = this;
+
+            ListenStop.IsEnabled = false;
+
+            InitializeSynthesizer();
+
+            mediaElement.MediaEnded += MediaElement_MediaEnded;
 
             /*현재시간 나타내기*/
             Timer.Tick += Timer_Tick;
@@ -46,9 +63,14 @@ namespace POS_UWP.Views
             {
                 strPosId = setFiveLength(PosId);
                 tb_PosNum.Text = strPosId;
-                int b = 1;
             }
         }
+
+        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("MediaElement_MediaEnded");
+        }
+
         private string setFiveLength(int number)
         {
             string str = number.ToString();
@@ -62,6 +84,72 @@ namespace POS_UWP.Views
         {
             tb_Time.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         }
+
+        private async void RunInUIThread(Action a)
+        {
+            await Dispatcher.RunAsync(CoreDispatcherPriority.High, () => a());
+        }
+
+        private void InitializeSynthesizer()
+        {
+            speechSynthesizer = new SpeechSynthesizer();
+        }
+
+        private void AIService_OnListeningStopped()
+        {
+            RunInUIThread(() => tb_Mode.Text = "음성인식 종료");
+        }
+
+        private void AIService_OnListeningStarted()
+        {
+            RunInUIThread(() => tb_Mode.Text = "음성인식 시작");
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+
+            AIService.OnListeningStarted -= AIService_OnListeningStarted;
+            AIService.OnListeningStopped -= AIService_OnListeningStopped;
+
+            speechSynthesizer?.Dispose();
+            speechSynthesizer = null;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            
+            var response = e.Parameter as AIResponse;
+            if (response != null)
+            {
+                var aiResponse = response;
+                //OutputJson(aiResponse);
+                //OutputParams(aiResponse);
+            }
+
+            AIService.OnListeningStarted += AIService_OnListeningStarted;
+            AIService.OnListeningStopped += AIService_OnListeningStopped;
+        }
+
+        private async void ProcessResult(AIResponse aiResponse)
+        {
+            RunInUIThread(() =>
+            {
+                tb_Mode.Text = "실행 중...";
+                //OutputJson(aiResponse);
+               // OutputParams(aiResponse);
+            });
+
+            var speechText = aiResponse.Result?.Fulfillment?.Speech;
+            if (!string.IsNullOrEmpty(speechText))
+            {
+                var speechStream = await speechSynthesizer.SynthesizeTextToStreamAsync(speechText);
+                mediaElement.SetSource(speechStream, speechStream.ContentType);
+                mediaElement.Play();
+            }
+        }
+
         private async void btn_Sale_Click(object sender, RoutedEventArgs e)
         {
             if (managerName != "")
@@ -74,6 +162,8 @@ namespace POS_UWP.Views
                 await md.ShowAsync();
             }
         }
+
+
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
@@ -120,6 +210,62 @@ namespace POS_UWP.Views
             }
             Web web = new Web();
             web.sendAllData();
+        }
+
+        private async System.Threading.Tasks.Task ListenStart_ClickAsync(object sender, RoutedEventArgs e)
+        {
+            ListenStart.IsEnabled = false;
+            ListenStop.IsEnabled = true;
+
+            if (mediaElement.CurrentState == MediaElementState.Playing)
+            {
+                mediaElement.Stop();
+            }
+
+            try
+            {
+                if (!recognitionActive)
+                {
+                    recognitionActive = true;
+                    var aiResponse = await AIService.StartRecognitionAsync();
+                    recognitionActive = false;
+
+                    if (aiResponse != null)
+                    {
+                        ProcessResult(aiResponse);
+                    }
+                }
+                else
+                {
+                    AIService.Cancel();
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                recognitionActive = false;
+                tb_Mode.Text = "취소 중...";
+            }
+            catch (Exception ex)
+            {
+                recognitionActive = false;
+                Debug.WriteLine(ex.ToString());
+                tb_Mode.Text = $"Empty or error result: {Environment.NewLine}{ex}";
+            }
+            finally
+            {
+                tb_Mode.Text = "음성 인식 중...";
+            }
+        }
+
+        private void ListenStop_Click(object sender, RoutedEventArgs e)
+        {
+            ListenStart.IsEnabled = true;
+            ListenStop.IsEnabled = false;        
+        }
+
+        private void ListenStart_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

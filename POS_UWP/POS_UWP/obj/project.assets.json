@@ -2,6 +2,18 @@
   "version": 2,
   "targets": {
     "UAP,Version=v10.0.10586": {
+      "ApiAiSDK/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        }
+      },
       "CrossPieCharts.UWP/1.0.2": {
         "type": "package",
         "compile": {
@@ -9,6 +21,45 @@
         },
         "runtime": {
           "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.2.3"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "[1.2.3]",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3]"
+        },
+        "compile": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -774,19 +825,28 @@
           "lib/win8/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Diagnostics.StackTrace/4.0.2": {
+      "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1"
+          "Microsoft.NETCore.Platforms": "1.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -2509,6 +2569,18 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
+      "ApiAiSDK/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        }
+      },
       "CrossPieCharts.UWP/1.0.2": {
         "type": "package",
         "compile": {
@@ -2516,6 +2588,45 @@
         },
         "runtime": {
           "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.2.3"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "[1.2.3]",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3]"
+        },
+        "compile": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -3486,19 +3597,28 @@
           "lib/win8/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Diagnostics.StackTrace/4.0.2": {
+      "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1"
+          "Microsoft.NETCore.Platforms": "1.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -5046,6 +5166,18 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-arm-aot": {
+      "ApiAiSDK/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        }
+      },
       "CrossPieCharts.UWP/1.0.2": {
         "type": "package",
         "compile": {
@@ -5053,6 +5185,45 @@
         },
         "runtime": {
           "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.2.3"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "[1.2.3]",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3]"
+        },
+        "compile": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -6062,19 +6233,28 @@
           "lib/win8/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Diagnostics.StackTrace/4.0.2": {
+      "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1"
+          "Microsoft.NETCore.Platforms": "1.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -7622,6 +7802,18 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
+      "ApiAiSDK/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        }
+      },
       "CrossPieCharts.UWP/1.0.2": {
         "type": "package",
         "compile": {
@@ -7629,6 +7821,45 @@
         },
         "runtime": {
           "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.2.3"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "[1.2.3]",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3]"
+        },
+        "compile": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -8608,19 +8839,28 @@
           "lib/win8/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Diagnostics.StackTrace/4.0.2": {
+      "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1"
+          "Microsoft.NETCore.Platforms": "1.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -10168,6 +10408,18 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x64-aot": {
+      "ApiAiSDK/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        }
+      },
       "CrossPieCharts.UWP/1.0.2": {
         "type": "package",
         "compile": {
@@ -10175,6 +10427,45 @@
         },
         "runtime": {
           "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.2.3"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "[1.2.3]",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3]"
+        },
+        "compile": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -11193,19 +11484,28 @@
           "lib/win8/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Diagnostics.StackTrace/4.0.2": {
+      "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1"
+          "Microsoft.NETCore.Platforms": "1.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -12753,6 +13053,18 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
+      "ApiAiSDK/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        }
+      },
       "CrossPieCharts.UWP/1.0.2": {
         "type": "package",
         "compile": {
@@ -12760,6 +13072,45 @@
         },
         "runtime": {
           "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.2.3"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "[1.2.3]",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3]"
+        },
+        "compile": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -13739,19 +14090,28 @@
           "lib/win8/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Diagnostics.StackTrace/4.0.2": {
+      "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1"
+          "Microsoft.NETCore.Platforms": "1.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -15299,6 +15659,18 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x86-aot": {
+      "ApiAiSDK/1.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/ApiAiSDK.dll": {}
+        }
+      },
       "CrossPieCharts.UWP/1.0.2": {
         "type": "package",
         "compile": {
@@ -15306,6 +15678,45 @@
         },
         "runtime": {
           "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.ApplicationInsights.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "1.2.3"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
+        }
+      },
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "[1.2.3]",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.2.3]"
+        },
+        "compile": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -16324,19 +16735,28 @@
           "lib/win8/_._": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.3.0": {
+      "System.Diagnostics.DiagnosticSource/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
-      "System.Diagnostics.StackTrace/4.0.2": {
+      "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1"
+          "Microsoft.NETCore.Platforms": "1.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
@@ -17885,6 +18305,18 @@
     }
   },
   "libraries": {
+    "ApiAiSDK/1.6.5": {
+      "sha512": "yo81xpa0clRQOcBuZYpC+9Mlo/3wzPu9htK6Opmzo0CIu9lkrMzaK8xFB+DpzqPwt4Bt0UdT/n0WkedFit74Tw==",
+      "type": "package",
+      "path": "apiaisdk/1.6.5",
+      "files": [
+        "apiaisdk.1.6.5.nupkg.sha512",
+        "apiaisdk.nuspec",
+        "lib/net35/ApiAiSDK.dll",
+        "lib/uap10.0/ApiAiSDK.dll",
+        "lib/wpa/ApiAiSDK.dll"
+      ]
+    },
     "CrossPieCharts.UWP/1.0.2": {
       "sha512": "i1wk9HbklmCpmszwXL27UuZ5MYD5rwgXvl+IBPI2E/+g4LE7IHIEbTH2Tb/ZTzgaxc+BTPVv4M7pSybpSq1K+A==",
       "type": "package",
@@ -17893,6 +18325,58 @@
         "crosspiecharts.uwp.1.0.2.nupkg.sha512",
         "crosspiecharts.uwp.nuspec",
         "lib/uap/CrossPieCharts.ClassLibrary.dll"
+      ]
+    },
+    "Microsoft.ApplicationInsights/2.4.0": {
+      "sha512": "4dX/zu3Psz9oM3ErU64xfOHuSxOwMxN6q5RabSkeYbX42Yn6dR/kDToqjs+txCRjrfHUxyYjfeJHu+MbCfvAsg==",
+      "type": "package",
+      "path": "microsoft.applicationinsights/2.4.0",
+      "files": [
+        "lib/net40/Microsoft.ApplicationInsights.XML",
+        "lib/net40/Microsoft.ApplicationInsights.dll",
+        "lib/net45/Microsoft.ApplicationInsights.XML",
+        "lib/net45/Microsoft.ApplicationInsights.dll",
+        "lib/net46/Microsoft.ApplicationInsights.XML",
+        "lib/net46/Microsoft.ApplicationInsights.dll",
+        "lib/netstandard1.3/Microsoft.ApplicationInsights.XML",
+        "lib/netstandard1.3/Microsoft.ApplicationInsights.dll",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll",
+        "lib/uap10.0/Microsoft.ApplicationInsights.dll",
+        "lib/wp8/Microsoft.ApplicationInsights.dll",
+        "microsoft.applicationinsights.2.4.0.nupkg.sha512",
+        "microsoft.applicationinsights.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+      "sha512": "5MGcvPQVaGlGyAVh9adg4sSkIVSYDKn+H3+YnZa9hi1gH/g6UsRt4HLc8vp/IxjlbmXbJyAB7dYJV/NHmAGAgA==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.persistencechannel/1.2.3",
+      "files": [
+        "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "microsoft.applicationinsights.persistencechannel.1.2.3.nupkg.sha512",
+        "microsoft.applicationinsights.persistencechannel.nuspec"
+      ]
+    },
+    "Microsoft.ApplicationInsights.WindowsApps/1.1.1": {
+      "sha512": "Orj0UQrjQ2z0aWZZoexl734Ge7Q4oVev3VFSsk6t8l2kImrfJ1eygkJWtQ1d7u0kF6MLLrvUvsMSxo+0rgPiMQ==",
+      "type": "package",
+      "path": "microsoft.applicationinsights.windowsapps/1.1.1",
+      "files": [
+        "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
+        "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
+        "lib/wp8/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
+        "lib/wp8/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
+        "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
+        "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
+        "microsoft.applicationinsights.windowsapps.1.1.1.nupkg.sha512",
+        "microsoft.applicationinsights.windowsapps.nuspec"
       ]
     },
     "Microsoft.CSharp/4.3.0": {
@@ -22242,29 +22726,35 @@
         "system.diagnostics.debug.nuspec"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/4.3.0": {
-      "sha512": "tD6kosZnTAGdrEa0tZSuFyunMbt/5KYDnHdndJYGqZoNy00XVXyACd5d6KnE1YgYv3ne2CjtAfNXo/fwEhnKUA==",
+    "System.Diagnostics.DiagnosticSource/4.4.0": {
+      "sha512": "2SMt95w+TKf2fth4mSlqn1AVNSmFDQkdTVmUe6D/oP1atzVU0vxTb+iDP+IHNQB1qSbYkWNoPN55SaMsGUe68A==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/4.3.0",
+      "path": "system.diagnostics.diagnosticsource/4.4.0",
       "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net45/System.Diagnostics.DiagnosticSource.xml",
         "lib/net46/System.Diagnostics.DiagnosticSource.dll",
         "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netcoreapp2.0/_._",
         "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
         "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
-        "system.diagnostics.diagnosticsource.nuspec"
+        "ref/netcoreapp2.0/_._",
+        "system.diagnostics.diagnosticsource.4.4.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "System.Diagnostics.StackTrace/4.0.2": {
-      "sha512": "MmP424iVWLyeW7XGtwC5NyfzsIwodFKwhW6yns3d+Sh8WFsFoPWq2cUlJJDAteapIm2qoJ8fc3VwIUroolbsEA==",
+    "System.Diagnostics.StackTrace/4.3.0": {
+      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
       "type": "package",
-      "path": "system.diagnostics.stacktrace/4.0.2",
+      "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -22295,7 +22785,7 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Diagnostics.StackTrace.dll",
-        "system.diagnostics.stacktrace.4.0.2.nupkg.sha512",
+        "system.diagnostics.stacktrace.4.3.0.nupkg.sha512",
         "system.diagnostics.stacktrace.nuspec"
       ]
     },
@@ -27375,7 +27865,11 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.10586": [
+      "ApiAiSDK >= 1.6.5",
       "CrossPieCharts.UWP >= 1.0.2",
+      "Microsoft.ApplicationInsights >= 2.4.0",
+      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.3",
+      "Microsoft.ApplicationInsights.WindowsApps >= 1.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.3.3",
       "Newtonsoft.Json >= 10.0.3",
       "SQLite.Net-PCL >= 3.1.1",
@@ -27383,15 +27877,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\myc\\.nuget\\packages\\": {}
+    "C:\\Users\\milk5\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\myc\\Desktop\\SW_TEST\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
+      "projectUniqueName": "D:\\newFolder_sudy\\공모전프로젝트\\2017공개sw_스마트포스기\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
       "projectName": "POS_UWP",
-      "projectPath": "C:\\Users\\myc\\Desktop\\SW_TEST\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
-      "outputPath": "C:\\Users\\myc\\Desktop\\SW_TEST\\POS_UWP\\POS_UWP\\obj\\",
+      "projectPath": "D:\\newFolder_sudy\\공모전프로젝트\\2017공개sw_스마트포스기\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
+      "outputPath": "D:\\newFolder_sudy\\공모전프로젝트\\2017공개sw_스마트포스기\\POS_UWP\\POS_UWP\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.10586"
@@ -27403,9 +27897,25 @@
       }
     },
     "dependencies": {
+      "ApiAiSDK": {
+        "target": "Package",
+        "version": "1.6.5"
+      },
       "CrossPieCharts.UWP": {
         "target": "Package",
         "version": "1.0.2"
+      },
+      "Microsoft.ApplicationInsights": {
+        "target": "Package",
+        "version": "2.4.0"
+      },
+      "Microsoft.ApplicationInsights.PersistenceChannel": {
+        "target": "Package",
+        "version": "1.2.3"
+      },
+      "Microsoft.ApplicationInsights.WindowsApps": {
+        "target": "Package",
+        "version": "1.1.1"
       },
       "Microsoft.NETCore.UniversalWindowsPlatform": {
         "target": "Package",
@@ -27427,9 +27937,25 @@
     "frameworks": {
       "uap10.0.10586": {
         "dependencies": {
+          "ApiAiSDK": {
+            "target": "Package",
+            "version": "1.6.5"
+          },
           "CrossPieCharts.UWP": {
             "target": "Package",
             "version": "1.0.2"
+          },
+          "Microsoft.ApplicationInsights": {
+            "target": "Package",
+            "version": "2.4.0"
+          },
+          "Microsoft.ApplicationInsights.PersistenceChannel": {
+            "target": "Package",
+            "version": "1.2.3"
+          },
+          "Microsoft.ApplicationInsights.WindowsApps": {
+            "target": "Package",
+            "version": "1.1.1"
           },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",

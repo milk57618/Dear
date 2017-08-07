@@ -1,1 +1,1 @@
-C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\POS_UWP.csproj;arm
+D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\POS_UWP.csproj;arm

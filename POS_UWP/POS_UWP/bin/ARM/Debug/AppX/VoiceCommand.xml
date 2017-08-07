@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="UniversalAppCommandSet_en-us">
+    <CommandPrefix> Dear </CommandPrefix>
+    <Example> Open POS Solution </Example>
+
+    <Command Name="Open">
+      <Example>  Open the POS </Example>
+      <ListenFor>open</ListenFor>
+      <ListenFor>hey dom</ListenFor>
+      <ListenFor>cancel</ListenFor>
+      <ListenFor>cadum</ListenFor>
+      <ListenFor>hey tell me</ListenFor>
+      <ListenFor>hey dumb</ListenFor>
+      <ListenFor>kadam</ListenFor>
+      <ListenFor>get down</ListenFor>
+      <ListenFor>okdumb</ListenFor>
+      <ListenFor>hey tom</ListenFor>
+      <ListenFor>can't com</ListenFor>
+      <ListenFor>can't tell me</ListenFor>
+      <ListenFor>get some</ListenFor>
+      <ListenFor>hey don</ListenFor>
+      <Feedback> Starting {pos}...</Feedback>
+      <VoiceCommandService Target="CortanaService"/>
+    </Command>
+
+    <Command Name="Close">
+      <Example>  Close the POS </Example>
+      <ListenFor>close</ListenFor>
+      <ListenFor>malcom</ListenFor>
+      <ListenFor>baucom </ListenFor>
+      <ListenFor>agam </ListenFor>
+      <ListenFor>markham</ListenFor>
+      <ListenFor>mom com</ListenFor>
+      <ListenFor>bogam</ListenFor>
+      <ListenFor>barcham</ListenFor>
+      <ListenFor>my mom</ListenFor>
+      <ListenFor>mark</ListenFor>
+      <ListenFor>bagam </ListenFor>
+      <ListenFor>how come</ListenFor>
+      <ListenFor>bhaga</ListenFor>
+      <ListenFor>maken</ListenFor>
+      <ListenFor>mom home</ListenFor>
+      <ListenFor>how about </ListenFor>
+      <ListenFor>my god</ListenFor>
+      <ListenFor>I'm</ListenFor>
+      <ListenFor>how long</ListenFor>
+      <ListenFor>my com</ListenFor>
+      <ListenFor>welcome</ListenFor>
+      <ListenFor>ha ha</ListenFor>
+      <Feedback> Close {pos}...</Feedback>
+      <VoiceCommandService Target="CortanaService"/>
+    </Command>
+
+    <PhraseTopic Label="pos" Senario="pos example">
+      <Subject></Subject>
+    </PhraseTopic>
+
+  </CommandSet>
+</VoiceCommands>

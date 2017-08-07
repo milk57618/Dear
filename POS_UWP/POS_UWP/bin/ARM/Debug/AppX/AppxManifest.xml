@@ -31,8 +31,9 @@
     </Application>
   </Applications>
   <Capabilities>
-    <Capability Name="internetClient" />
     <iot:Capability Name="systemManagement" />
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="microphone" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
@@ -45,6 +46,7 @@
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.26419.1" />
     <build:Item Name="SQLite.UWP.2015" Version="3.19.3" />
-    <build:Item Name="MakePri.exe" Version="10.0.15063.468 (WinBuild.160101.0800)" />
+    <build:Item Name="WindowsIoT" Version="10.0.15063.0" />
+    <build:Item Name="MakePri.exe" Version="10.0.15063.137 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

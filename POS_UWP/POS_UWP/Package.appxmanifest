@@ -46,6 +46,7 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <DeviceCapability Name="microphone"/>
     <iot:Capability Name="systemManagement"/>
   </Capabilities>
 </Package>

@@ -34,7 +34,7 @@ namespace POS_UWP
         {
             sendProduct();
             sendSaleSearch();
-            test();
+            //test();
         }
 
         private async void test()

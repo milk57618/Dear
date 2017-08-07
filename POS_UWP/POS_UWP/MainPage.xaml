@@ -5,9 +5,15 @@
     xmlns:local="using:POS_UWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="479.757" Width="799.505">
+    mc:Ignorable="d" Width="800" Height="480">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <Button x:Name="start"  Content="Cortana test 시작" HorizontalAlignment="Left" Height="108" Margin="233,79,0,0" VerticalAlignment="Top" Width="300" Click="start_Click" />
+        <MediaElement Grid.Row="0" Name="mediaElement" />
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ResolvedQuery" VerticalAlignment="Top" Margin="235,253,0,0"/>
+        <TextBox x:Name="txtresolvedQuery" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="349,249,0,0" Width="350"/>
+        <TextBox x:Name="txtSpeach" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="349,307,0,0" Width="350"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Speach" VerticalAlignment="Top" Margin="235,311,0,0"/>
+        <TextBlock x:Name="tbConnect" HorizontalAlignment="Left" TextWrapping="Wrap" Text="연결여부" VerticalAlignment="Top" Margin="235,207,0,0" Width="258"/>
     </Grid>
 </Page>

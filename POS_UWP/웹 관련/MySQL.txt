@@ -21,8 +21,7 @@ PosId int,
 id int primary key,
 Category varchar(20),
 Name varchar(20),
-Price int,
-FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+Price int
 );
 
 create table SaleSearch(
@@ -33,14 +32,12 @@ Cash int,
 Card int,
 Id int,
 SaleTime varchar(30),
-Finished int,
-FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+Finished int
 );
 
 create table AfterService
 (
 Time varchar(30),
 PosId int,
-Text varchar(1000),
-FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+text varchar(1000)
 );
