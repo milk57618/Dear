@@ -108,10 +108,7 @@ namespace POS_UWP
                // this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-
            
-
-
             Frame rootFrame = Window.Current.Content as Frame;
 
             if (rootFrame == null)
@@ -134,7 +131,7 @@ namespace POS_UWP
             {
                 if (rootFrame.Content == null)
                 {
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(POS_main), e.Arguments);
                 }
                 // 현재 창이 활성 창인지 확인
                 Window.Current.Activate();

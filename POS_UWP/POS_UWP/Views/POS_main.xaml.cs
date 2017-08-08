@@ -9,6 +9,9 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
+using POS_UWP.DBConn;
+using Windows.System;
 
 namespace POS_UWP.Views
 {
@@ -29,8 +32,6 @@ namespace POS_UWP.Views
         {
             this.InitializeComponent();
             DataContext = this;
-
-            ListenStop.IsEnabled = false;
 
             InitializeSynthesizer();
 
@@ -90,19 +91,30 @@ namespace POS_UWP.Views
             await Dispatcher.RunAsync(CoreDispatcherPriority.High, () => a());
         }
 
-        private void InitializeSynthesizer()
+        private async void InitializeSynthesizer()
         {
+            //install the VCD file
+            VCDInstall vch = new VCDInstall();
+            await vch.InstallVCD();
+
+            await InitializeRecognizer();
             speechSynthesizer = new SpeechSynthesizer();
+        }
+
+        private async Task InitializeRecognizer()
+        {
+            await AIService.InitializeAsync();
+            ListenStart.IsEnabled = true;
         }
 
         private void AIService_OnListeningStopped()
         {
-            RunInUIThread(() => tb_Mode.Text = "음성인식 종료");
+            RunInUIThread(() => tb_Mode.Text = "처리 중...");
         }
 
         private void AIService_OnListeningStarted()
         {
-            RunInUIThread(() => tb_Mode.Text = "음성인식 시작");
+            RunInUIThread(() => tb_Mode.Text = "듣는 중...");
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -124,12 +136,55 @@ namespace POS_UWP.Views
             if (response != null)
             {
                 var aiResponse = response;
-                //OutputJson(aiResponse);
-                //OutputParams(aiResponse);
+                Output(aiResponse);
             }
 
             AIService.OnListeningStarted += AIService_OnListeningStarted;
             AIService.OnListeningStopped += AIService_OnListeningStopped;
+        }
+
+        private async void Output(AIResponse aiResponse)
+        {
+            string Result = aiResponse.Result.ResolvedQuery;
+            
+            //개점 음성 기능
+            if (Result == "open" || Result== "hey dom" || Result == "cancel" || Result == "cadum" || Result == "hey tell me" || Result == "hey dumb" || Result == "kadam" || Result == "get down" || Result == "okdumb" || Result == "hey tom" || Result == "can't com" || Result == "can't tell me" || Result == "get some" || Result== "hey don")
+            {
+                if (btn_Login.IsEnabled == true)
+                {
+                    Frame.Navigate(typeof(POS_login));
+                    tb_Mode.Text = "";
+                }                   
+                else
+                {
+                    MessageDialog mess = new MessageDialog("이미 개점이 되어있습니다.");
+                    await mess.ShowAsync();
+                    tb_Mode.Text = "";
+                }
+            }
+            //마감 음성 기능
+            else if(Result=="close" || Result== "malcom"|| Result == "baucom"|| Result == "agam"|| Result == "markham"|| Result == "mom com"|| Result == "bogam"|| Result == "barcham"|| Result == "my mom"|| Result == "mark"|| Result == "bagam"|| Result == "how come"|| Result == "bhaga"|| Result == "maken"|| Result == "mom home"|| Result == "how about"|| Result == "my god" || Result == "I'm"|| Result == "how long"|| Result == "my com"|| Result == "welcome"|| Result == "ha ha")
+            {
+                if (btn_Finishing.IsEnabled == true && tb_Manager1.Text!="") //관리자가 존재하고 개점이 된 이후 상태
+                {
+                    tb_Mode.Text = "";
+                    new DBConn_MemberTime().UpdateMemberTime(POS_main.managerName);
+                    new DBConn_SaleSearch().Finish();
+                    ShutdownManager.BeginShutdown(ShutdownKind.Shutdown, TimeSpan.Zero);
+                }
+                else
+                {
+                    tb_Mode.Text = "";
+                    ShutdownManager.BeginShutdown(ShutdownKind.Shutdown, TimeSpan.Zero);
+                }
+            }
+            else
+            {
+                tb_Mode.Text = Result;
+                MessageDialog mess = new MessageDialog("잘못 들었습니다.");
+                await mess.ShowAsync();
+                tb_Mode.Text = "";
+            }
         }
 
         private async void ProcessResult(AIResponse aiResponse)
@@ -137,8 +192,7 @@ namespace POS_UWP.Views
             RunInUIThread(() =>
             {
                 tb_Mode.Text = "실행 중...";
-                //OutputJson(aiResponse);
-               // OutputParams(aiResponse);
+                Output(aiResponse);               
             });
 
             var speechText = aiResponse.Result?.Fulfillment?.Speech;
@@ -162,8 +216,6 @@ namespace POS_UWP.Views
                 await md.ShowAsync();
             }
         }
-
-
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
@@ -212,10 +264,9 @@ namespace POS_UWP.Views
             web.sendAllData();
         }
 
-        private async System.Threading.Tasks.Task ListenStart_ClickAsync(object sender, RoutedEventArgs e)
+        private async void ListenStart_Click(object sender, RoutedEventArgs e)
         {
-            ListenStart.IsEnabled = false;
-            ListenStop.IsEnabled = true;
+            ListenStart.IsEnabled = false;            
 
             if (mediaElement.CurrentState == MediaElementState.Playing)
             {
@@ -243,7 +294,7 @@ namespace POS_UWP.Views
             catch (OperationCanceledException)
             {
                 recognitionActive = false;
-                tb_Mode.Text = "취소 중...";
+                tb_Mode.Text = "음성인식 처리 실패";
             }
             catch (Exception ex)
             {
@@ -253,19 +304,9 @@ namespace POS_UWP.Views
             }
             finally
             {
-                tb_Mode.Text = "음성 인식 중...";
+                tb_Mode.Text = "";
+                ListenStart.IsEnabled = true;
             }
-        }
-
-        private void ListenStop_Click(object sender, RoutedEventArgs e)
-        {
-            ListenStart.IsEnabled = true;
-            ListenStop.IsEnabled = false;        
-        }
-
-        private void ListenStart_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -33,8 +33,6 @@
                 <TextBlock x:Name="tb_Mode"  Margin="12,14"/>
             </CommandBar.Content>
             <AppBarButton x:Name="ListenStart" Label="start" Click="ListenStart_Click" Icon="Play"/>
-            <AppBarButton x:Name="ListenStop" Icon="Stop" Label="stop" Click="ListenStop_Click"/>
-           
         </CommandBar>
         <MediaElement Grid.Row="0" Name="mediaElement" />
     </Grid>
