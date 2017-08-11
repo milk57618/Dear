@@ -65,7 +65,7 @@ namespace POS_UWP
                                 var resp = VoiceCommandResponse.CreateResponse(processingMessage);
                                 await voiceServiceConnection.ReportSuccessAsync(resp);
 
-                                MainPage.startCheck = true;
+                                POS_main.start= true;
                             }
                             break;
                         case "Close":  //마감

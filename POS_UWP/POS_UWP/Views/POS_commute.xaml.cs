@@ -36,7 +36,7 @@ namespace POS_UWP.Views
             curYear = int.Parse(DateTime.Now.Year.ToString());
             curMonth = int.Parse(DateTime.Now.Month.ToString());
 
-            ObservableCollection<Member> DB_Member = dbMemHelper.GetAllMember();
+            List<Member> DB_Member = dbMemHelper.GetAllMember();
 
             /*콤보박스에 직원들 이름을 추가한다.*/
             cb_Member.ItemsSource = DB_Member.OrderBy(i => i.Id).ToList();

@@ -73,5 +73,14 @@ namespace POS_UWP.DBConn
             }
         }
 
+        /*모든 멤버타임의 리스트를 반환*/
+        public List<MemberTime> GetAllMemberTime()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                List<MemberTime> myCollection = dbConn.Table<MemberTime>().ToList<MemberTime>();
+                return myCollection;
+            }
+        }
     }
 }

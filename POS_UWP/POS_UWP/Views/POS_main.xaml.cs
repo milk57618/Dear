@@ -21,6 +21,7 @@ namespace POS_UWP.Views
         public static int managerID = 0;
         public static int PosId = -1;
         public static string strPosId = "";
+        public static bool start = false;
 
         private SpeechSynthesizer speechSynthesizer;
         private AIService AIService => (Application.Current as App)?.AIService;
@@ -86,11 +87,18 @@ namespace POS_UWP.Views
             tb_Time.Text = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         }
 
+        /// <summary>
+        /// UI Thread
+        /// </summary>
+        /// <param name="a"></param>
         private async void RunInUIThread(Action a)
         {
             await Dispatcher.RunAsync(CoreDispatcherPriority.High, () => a());
         }
 
+        /// <summary>
+        /// 음성인식 파일 설치 및 음성 기능 엑세스 객체 생성
+        /// </summary>
         private async void InitializeSynthesizer()
         {
             //install the VCD file
@@ -101,17 +109,27 @@ namespace POS_UWP.Views
             speechSynthesizer = new SpeechSynthesizer();
         }
 
+        /// <summary>
+        /// 음성인식 AI 서비스 초기화
+        /// </summary>
+        /// <returns></returns>
         private async Task InitializeRecognizer()
         {
             await AIService.InitializeAsync();
             ListenStart.IsEnabled = true;
         }
 
+        /// <summary>
+        /// 음성인식 AI 서비스 종료 스레드
+        /// </summary>
         private void AIService_OnListeningStopped()
         {
             RunInUIThread(() => tb_Mode.Text = "처리 중...");
         }
 
+        /// <summary>
+        /// 음성인식 AI 서비스 시작 스레드
+        /// </summary>
         private void AIService_OnListeningStarted()
         {
             RunInUIThread(() => tb_Mode.Text = "듣는 중...");
@@ -143,27 +161,34 @@ namespace POS_UWP.Views
             AIService.OnListeningStopped += AIService_OnListeningStopped;
         }
 
+        /// <summary>
+        /// 음성 인식 처리 함수
+        /// </summary>
+        /// <param name="aiResponse"></param>
         private async void Output(AIResponse aiResponse)
         {
             string Result = aiResponse.Result.ResolvedQuery;
             
             //개점 음성 기능
-            if (Result == "open" || Result== "hey dom" || Result == "cancel" || Result == "cadum" || Result == "hey tell me" || Result == "hey dumb" || Result == "kadam" || Result == "get down" || Result == "okdumb" || Result == "hey tom" || Result == "can't com" || Result == "can't tell me" || Result == "get some" || Result== "hey don")
+            if (Result == "open" || Result.LastIndexOf("hey") == 0 || Result == "kidum" || Result == "kodum" || Result == "canal" || Result == "cancel"|| Result == "can come" || Result == "cadum" || Result == "kadam" || Result == "get down" || Result == "ok dumb"  || Result == "can't com" || Result == "can't tell me" || Result == "get some" || Result == "kadam" || Result == "can you tell me" || Result == "cape town" || Result == "kick time" || Result == "K" || Result == "K tell me" || Result == "K time" || Result=="kids um")
             {
                 if (btn_Login.IsEnabled == true)
                 {
+                    btn_Login.IsEnabled = false;
+                    
                     Frame.Navigate(typeof(POS_login));
                     tb_Mode.Text = "";
                 }                   
                 else
                 {
+                    tb_Mode.Text = Result;
                     MessageDialog mess = new MessageDialog("이미 개점이 되어있습니다.");
                     await mess.ShowAsync();
                     tb_Mode.Text = "";
                 }
             }
             //마감 음성 기능
-            else if(Result=="close" || Result== "malcom"|| Result == "baucom"|| Result == "agam"|| Result == "markham"|| Result == "mom com"|| Result == "bogam"|| Result == "barcham"|| Result == "my mom"|| Result == "mark"|| Result == "bagam"|| Result == "how come"|| Result == "bhaga"|| Result == "maken"|| Result == "mom home"|| Result == "how about"|| Result == "my god" || Result == "I'm"|| Result == "how long"|| Result == "my com"|| Result == "welcome"|| Result == "ha ha")
+            else if(Result=="close" || Result == "malcolm" || Result == "hello" || Result== "malcom"|| Result == "baucom"|| Result == "agam"|| Result == "markham"|| Result == "mom com"|| Result == "bogam"|| Result == "barcham"|| Result == "my mom"|| Result == "mark"|| Result == "bagam"|| Result == "how come"|| Result == "bhaga"|| Result == "maken"|| Result == "mom home"|| Result == "how about"|| Result == "my god" || Result == "I'm"|| Result == "how long"|| Result == "my com"|| Result == "welcome"|| Result == "ha ha" || Result == "no problem")
             {
                 if (btn_Finishing.IsEnabled == true && tb_Manager1.Text!="") //관리자가 존재하고 개점이 된 이후 상태
                 {
@@ -178,6 +203,33 @@ namespace POS_UWP.Views
                     ShutdownManager.BeginShutdown(ShutdownKind.Shutdown, TimeSpan.Zero);
                 }
             }
+            //알바비 확인 음성인식
+            else if (Result.Contains("poppy") || Result.Contains("puppy") || Result.Contains("bobby") || Result== "I about the" || Result== "I love you" || Result== "I'm not be" || Result == "I'm happy" || Result == "I don't be")
+            {
+                if(btn_Login.IsEnabled==false)
+                    Frame.Navigate(typeof(POS_commute));
+                else
+                {
+                    tb_Mode.Text = Result;
+                    MessageDialog mess = new MessageDialog("개점을 먼저 하세요");
+                    await mess.ShowAsync();
+                    tb_Mode.Text = "";
+                }
+
+            }
+            //매출
+            else if (Result.Contains("true") || Result.Contains("sure") || Result == "mitscher" || Result == "later" || Result == "next year" || Result == "mature" || Result == "matroo" || Result == "better" || Result == "the trip" || Result == "picture" || Result == "neptune" || Result == "mitch" || Result == "bing trip" || Result == "bathroom" || Result == "lecture" || Result == "netrunner" || Result == "microsoft" || Result == "mid june" || Result == "vectren" || Result == "metrou")
+            {
+                if (btn_Login.IsEnabled == false)
+                    Frame.Navigate(typeof(POS_salestatus));
+                else
+                {
+                    tb_Mode.Text = Result;
+                    MessageDialog mess = new MessageDialog("개점을 먼저 하세요");
+                    await mess.ShowAsync();
+                    tb_Mode.Text = "";
+                }
+            }
             else
             {
                 tb_Mode.Text = Result;
@@ -187,6 +239,10 @@ namespace POS_UWP.Views
             }
         }
 
+        /// <summary>
+        /// 음성 인식 처리
+        /// </summary>
+        /// <param name="aiResponse"></param>
         private async void ProcessResult(AIResponse aiResponse)
         {
             RunInUIThread(() =>
@@ -261,7 +317,7 @@ namespace POS_UWP.Views
                 return;
             }
             Web web = new Web();
-            web.sendAllData();
+            web.sendAll();
         }
 
         private async void ListenStart_Click(object sender, RoutedEventArgs e)

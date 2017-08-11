@@ -19,7 +19,7 @@ namespace POS_UWP.DBConn
             dbConn.CreateTable<Member>();
         }
 
-        /*정보수정을 통해서 디비를 업데이트 하는 함수*/
+        /*정보수정을 통해 디비를 업데이트 하는 함수*/
         public void UpdateMember(String Name, String Phone, string posi, int Id, string Pay)
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
@@ -181,6 +181,16 @@ namespace POS_UWP.DBConn
             }
         }
 
+        /*모든 멤버의 리스트를 반환*/
+        public List<Member> GetAllMember()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                List<Member> myCollection = dbConn.Table<Member>().ToList<Member>();
+                return myCollection;
+            }
+        }
+
         /*멤버 삭제함수*/
         public void DeleteMember(int memId)
 
@@ -224,20 +234,5 @@ namespace POS_UWP.DBConn
                 return MemberList;
             }
         }  //여기 추가됨!!!
-
-
-        /*모든 멤버를 추출한다.*/
-        public ObservableCollection<Member> GetAllMember()
-        {
-            using (var dbConn = new SQLiteConnection(App.DB_PATH))
-            {
-                List<Member> allMember = dbConn.Query<Member>("select * from Member");
-
-                ObservableCollection<Member> MemList = new ObservableCollection<Member>(allMember);
-
-                return MemList;
-
-            }
-        }
     }
 }
