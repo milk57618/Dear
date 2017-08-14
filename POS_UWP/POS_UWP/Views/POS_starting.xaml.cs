@@ -28,7 +28,7 @@ namespace POS_UWP.Views
             {
                 // 스레드를 사용하여 5분마다 웹서버로 DB정보 전송
                 Random r = new Random();
-                var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(10) };
+                var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(300) };
                 timer.Start();
                 timer.Tick += (sender2, args) =>
                 {

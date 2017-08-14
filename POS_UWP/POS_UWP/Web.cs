@@ -16,7 +16,7 @@ namespace POS_UWP
     public class Web
     {
         /* 웹서버 IP 주소 */
-        private const string ip = "192.168.219.106";
+        private const string ip = "125.183.218.149";
 
         private static DBConn_Category dbc = new DBConn_Category();
         private static DBConn_Product dbp = new DBConn_Product();
