@@ -15,13 +15,14 @@ namespace POS_UWP.PosDB
         [SQLite.PrimaryKey,SQLite.AutoIncrement]
         public int Id { get; set; }
         
-
         public string Date { get; set; }
         
         public string Name { get; set; }
 
         public string workStart { get; set; }
+
         public string workFinish { get; set; }
+
         public double workTime { get; set; }
 
         public MemberTime() { }

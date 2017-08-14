@@ -150,7 +150,7 @@ namespace POS_UWP.Views
         /* 파이차트 생성 */
         private void LoadPieChart()
         {
-            List<SaleHistory> HistoryList = Db_salehistory.ReadAllSaleHistory();
+            List<SaleHistory> HistoryList = Db_salehistory.GetAllSaleHistory();
             List<ProductRate> ProductRateList = new List<ProductRate>();
 
             foreach (SaleHistory h in HistoryList)
@@ -211,7 +211,7 @@ namespace POS_UWP.Views
         /* 라인차트 생성 */
         private void LoadLineChart()
         {
-            List<SaleSearch> SaleList = Db_salesearch.ReadAllSaleSearch();
+            List<SaleSearch> SaleList = Db_salesearch.GetAllSaleSearch();
             List<SaleSum> SumList = new List<SaleSum>();
 
             switch (mode)

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Windows.UI.Xaml.Input;
+using System.Threading.Tasks;
 
 namespace POS_UWP.Views
 {
@@ -45,8 +46,7 @@ namespace POS_UWP.Views
                 await messageDialog.ShowAsync();
                 return;
             }
-            Web web = new Web();
-            HttpResponseMessage respon = web.login(txtbox_id.Text, pb_pw.Password);
+            HttpResponseMessage respon = Web.login(txtbox_id.Text, pb_pw.Password);
 
             /* 웹서버 컴퓨터의 mysql이 연결이 안되면 -2, 존재하지 않는 계정이면 -1, 존재하는 계정이면 그 계정의 PosId */
             String strRespon = await respon.Content.ReadAsStringAsync();
@@ -69,6 +69,10 @@ namespace POS_UWP.Views
                 txtbox_id.Text = "";
                 pb_pw.Password = "";
                 POS_main.PosId = PosId;
+                Task t = new Task(() => {
+                    Web.receiveDataFromServer(); // 로그인 성공시 웹에서 DB정보들 받아옴
+                });
+                t.Start();
 
                 Frame.Navigate(typeof(POS_starting));
             }

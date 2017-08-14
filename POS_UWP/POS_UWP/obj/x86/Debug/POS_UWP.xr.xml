@@ -29,8 +29,8 @@
       <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -411,14 +411,18 @@
       <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="POS_UWP.Views.POS_login" />
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarToggleButton">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
+      <RootProperty Name="Name" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Label" />
+      <RootProperty Name="Icon" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="POS_UWP.Views.POS_main" />
     <RootType FullName="POS_UWP.Views.POS_manager" />

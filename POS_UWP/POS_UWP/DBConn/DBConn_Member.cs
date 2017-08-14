@@ -167,7 +167,6 @@ namespace POS_UWP.DBConn
                     return true;
                 }
             }
-
         }
 
         /*리스트 뷰에 보여주기위해 디비에서 추출*/
@@ -180,7 +179,7 @@ namespace POS_UWP.DBConn
                 return MembersList;
             }
         }
-
+        
         /*모든 멤버의 리스트를 반환*/
         public List<Member> GetAllMember()
         {
@@ -228,11 +227,37 @@ namespace POS_UWP.DBConn
             {
                 List<Member> myCollection = dbConn.Query<Member>("select * from Member where Position=" + "'" + cate + "'");
 
-
                 ObservableCollection<Member> MemberList = new ObservableCollection<Member>(myCollection);
 
                 return MemberList;
             }
-        }  //여기 추가됨!!!
+        }
+
+        /* Member 데이터베이스 값들을 모두 삭제하는 함수 */
+        public void DeleteAllMember()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.DropTable<Member>();
+                dbConn.CreateTable<Member>();
+                dbConn.Dispose();
+                dbConn.Close();
+            }
+        }
+
+        /* 배열을 받아서 DB에 모두 입력 */
+        public void InsertMemberArray(Member[] member)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.RunInTransaction(() =>
+                {
+                    foreach (Member m in member)
+                    {
+                        dbConn.Insert(m);
+                    }
+                });
+            }
+        }
     }
 }

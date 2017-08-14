@@ -161,7 +161,7 @@ namespace POS_UWP.DBConn
             }
         }
 
-        /*Sale 데이터베이스 값들을 모두 삭제하는 함수*/
+        /* Sale 데이터베이스 값들을 모두 삭제하는 함수 */
         public void DeleteAllSale()
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
@@ -181,6 +181,21 @@ namespace POS_UWP.DBConn
                 int count = dbConn.Query<Sale>("select * from Sale").Count;
                 return count + 1;   //추가시 아이디 정해주는 함수
 
+            }
+        }
+
+        /* 배열을 받아서 DB에 모두 입력 */
+        public void InsertSaleArray(Sale[] sale)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.RunInTransaction(() =>
+                {
+                    foreach (Sale s in sale)
+                    {
+                        dbConn.Insert(s);
+                    }
+                });
             }
         }
     }

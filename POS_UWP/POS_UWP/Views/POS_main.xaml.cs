@@ -195,6 +195,7 @@ namespace POS_UWP.Views
                     tb_Mode.Text = "";
                     new DBConn_MemberTime().UpdateMemberTime(POS_main.managerName);
                     new DBConn_SaleSearch().Finish();
+                    Web.sendDataToServer();
                     ShutdownManager.BeginShutdown(ShutdownKind.Shutdown, TimeSpan.Zero);
                 }
                 else
@@ -306,18 +307,6 @@ namespace POS_UWP.Views
         private void btn_SaleState_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(POS_salestatus));
-        }
-
-        private async void btn_test_Click(object sender, RoutedEventArgs e)
-        {
-            if (POS_starting.openCheck == false)
-            {
-                MessageDialog md = new MessageDialog("개점 하고 누르세요");
-                await md.ShowAsync();
-                return;
-            }
-            Web web = new Web();
-            web.sendAll();
         }
 
         private async void ListenStart_Click(object sender, RoutedEventArgs e)

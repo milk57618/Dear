@@ -15,29 +15,77 @@ UserPw varchar(50) not null,
 Money int
 );
 
+create table AfterService
+(
+Time varchar(30),
+PosId int,
+Text varchar(1000),
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+create table Member
+(
+PosId int,
+Id int,
+Price int,
+Name varchar(30),
+PhoneNumber varchar(30),
+StartTime varchar(30),
+FinishTime varchar(30),
+Position varchar(20),
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+create table MemberTime(
+PosId int,
+Id int,
+Date varchar(15),
+Name varchar(30),
+workStart varchar(30),
+workFinish varchar(30),
+workTime int,
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+create table Category(
+PosId int,
+Id int,
+Category varchar(20),
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 create table Product
 (
 PosId int,
 id int primary key,
 Category varchar(20),
 Name varchar(20),
-Price int
+Price int,
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 create table SaleSearch(
 PosId int,
-SaleCount int primary key,
+SaleCount int,
 Price int,
 Cash int,
 Card int,
 Id int,
-SaleTime varchar(30),
-Finished int
+SaleTime varchar(30) Primary key,
+Finished int,
+Unique(SaleCount, SaleTime),
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-create table AfterService
-(
-Time varchar(30),
+create table SaleHistory(
 PosId int,
-text varchar(1000)
+HistoryNumber int primary key,
+ProductCount int,
+Name varchar(30),
+SaleTime varchar(30),
+OnePrice int,
+Count int,
+TotalPrice int,
+FOREIGN KEY(PosId) REFERENCES seller(PosId) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(SaleTime) REFERENCES SaleSearch(SaleTime) ON DELETE CASCADE ON UPDATE CASCADE
 );

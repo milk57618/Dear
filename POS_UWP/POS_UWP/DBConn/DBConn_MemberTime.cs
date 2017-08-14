@@ -82,5 +82,33 @@ namespace POS_UWP.DBConn
                 return myCollection;
             }
         }
+
+        /* MemberTime 데이터베이스 값들을 모두 삭제하는 함수 */
+        public void DeleteAllMemberTime()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.DropTable<MemberTime>();
+                dbConn.CreateTable<MemberTime>();
+                dbConn.Dispose();
+                dbConn.Close();
+            }
+        }
+
+
+        /* 배열을 받아서 DB에 모두 입력 */
+        public void InsertMemberTimeArray(MemberTime[] memberTime)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.RunInTransaction(() =>
+                {
+                    foreach (MemberTime mt in memberTime)
+                    {
+                        dbConn.Insert(mt);
+                    }
+                });
+            }
+        }
     }
 }

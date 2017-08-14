@@ -12,7 +12,6 @@ namespace POS_UWP.PosDB
 {
     public class Sale
     {   
-        
         [SQLite.Unique]
         public int ProductCount { get; set; }
 

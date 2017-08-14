@@ -27,7 +27,6 @@
                 <SymbolIcon Symbol="People"></SymbolIcon>
             </Button.Content>
         </Button>
-        <Button x:Name ="btn_test" Content="테스트용 버튼" HorizontalAlignment="Left" Height="31" Margin="341,87,0,0" VerticalAlignment="Top" Width="149" Click="btn_test_Click"/>
         <CommandBar Margin="-8,432,-3,0">
             <CommandBar.Content>
                 <TextBlock x:Name="tb_Mode"  Margin="12,14"/>

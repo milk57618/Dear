@@ -171,7 +171,7 @@ namespace POS_UWP.Views
             if (cb_Category.SelectedIndex != -1)
             {
                 Categorys cb_item = cb_Category.SelectedItem as Categorys;
-                cb_select_cate = cb_item.category;
+                cb_select_cate = cb_item.Category;
                 txtbox_Name.Text = "";
                 txtbox_Price.Text = "";
                 POS_product_Refresh();

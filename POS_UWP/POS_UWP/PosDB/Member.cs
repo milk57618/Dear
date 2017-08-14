@@ -11,7 +11,7 @@ namespace POS_UWP.PosDB
         [SQLite.PrimaryKey]
         public int Id { get; set; }
 
-        public string Price { get; set; }
+        public string Price { get; set; } // 시급
 
         public string Name { get; set; }
 
@@ -28,7 +28,7 @@ namespace POS_UWP.PosDB
         public Member(int Id, string name, string phone, string position, string price)
         {
             this.Id = Id;
-            this.Name = name;
+            Name = name;
             PhoneNumber = phone;
             StartTime = DateTime.Now.ToString();
             Position = position;

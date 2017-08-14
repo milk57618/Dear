@@ -27877,15 +27877,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\milk5\\.nuget\\packages\\": {}
+    "C:\\Users\\myc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\newFolder_sudy\\공모전프로젝트\\2017공개sw_스마트포스기\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
+      "projectUniqueName": "C:\\Users\\myc\\Desktop\\SW_TEST\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
       "projectName": "POS_UWP",
-      "projectPath": "D:\\newFolder_sudy\\공모전프로젝트\\2017공개sw_스마트포스기\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
-      "outputPath": "D:\\newFolder_sudy\\공모전프로젝트\\2017공개sw_스마트포스기\\POS_UWP\\POS_UWP\\obj\\",
+      "projectPath": "C:\\Users\\myc\\Desktop\\SW_TEST\\POS_UWP\\POS_UWP\\POS_UWP.csproj",
+      "outputPath": "C:\\Users\\myc\\Desktop\\SW_TEST\\POS_UWP\\POS_UWP\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.10586"
