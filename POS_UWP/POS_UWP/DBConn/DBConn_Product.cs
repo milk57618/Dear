@@ -136,5 +136,32 @@ namespace POS_UWP.DBConn
 
             }
         }
+
+        /* Product 데이터베이스 값들을 모두 삭제하는 함수 */
+        public void DeleteAllProduct()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.DropTable<Product>();
+                dbConn.CreateTable<Product>();
+                dbConn.Dispose();
+                dbConn.Close();
+            }
+        }
+
+        /* 배열을 받아서 DB에 모두 입력 */
+        public void InsertProductArray(Product[] product)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.RunInTransaction(() =>
+                {
+                    foreach (Product p in product)
+                    {
+                        dbConn.Insert(p);
+                    }
+                });
+            }
+        }
     }
 }

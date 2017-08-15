@@ -33,12 +33,9 @@ namespace POS_UWP
         /// Singleton 응용 프로그램 개체를 초기화합니다. 이것은 실행되는 작성 코드의 첫 번째
         /// 줄이며 따라서 main() 또는 WinMain()과 논리적으로 동일합니다.
         /// </summary>
-        private TransitionCollection transitions;
         public static string DB_PATH = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "POS.sqlite")); //DataBase File
         public AIService AIService { get; private set; }  //use the AIService
         private ApiAi apiAi;
-        private VoiceCommandServiceConnection voiceServiceConnection;
-        private BackgroundTaskDeferral serviceDeferral;
 
         public App()
         {
@@ -100,7 +97,7 @@ namespace POS_UWP
         /// 특정 파일을 여는 등 응용 프로그램을 시작할 때
         /// </summary>
         /// <param name="e">시작 요청 및 프로세스에 대한 정보입니다.</param>
-        protected async override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)

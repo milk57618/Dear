@@ -76,8 +76,8 @@ namespace POS_UWP.Views
                     POS_main.managerID = cb_member.Id;
                     string date = DateTime.Now.ToString("yyyy/M");
                     string day = DateTime.Now.ToString("yyyy/MM/dd HH:mm");
-                    T_dbhelper.InsertMemberTime(new MemberTime(cb_member.Name, date, day));     //이전 멤버의 기록을 추가한다.
-
+                    T_dbhelper.InsertMemberTime(new MemberTime(cb_member.Name, date, day)); //이전 멤버의 기록을 추가한다.
+                    Web.sendDataToServer();
 
                     Frame.GoBack();
                 }

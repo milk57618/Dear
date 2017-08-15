@@ -16,9 +16,9 @@ namespace POS_UWP.PosDB
         public int Id { get; set; }
 
         [SQLite.Unique]
-        public string category { get; set; }
+        public string Category { get; set; }
 
         public Categorys() { }
-        public Categorys(int id, string cate) { Id = id; category = cate; }
+        public Categorys(int id, string cate) { Id = id; Category = cate; }
     }
 }

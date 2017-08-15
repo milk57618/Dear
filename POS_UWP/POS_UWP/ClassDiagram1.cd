@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="POS_UWP.Views.POS_category" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAgABIAAABAAAIAgAAAAIAAEAAGAg=</HashCode>
+      <FileName>Views\POS_category.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_commute" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAABAAAAEAAAIAADAAAACgQAAAAAAAAQAAEAABAA=</HashCode>
+      <FileName>Views\POS_commute.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_compound" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAQBAkgAAAAAAAgAQAAAAAIAAAABABAEAAAAA=</HashCode>
+      <FileName>Views\POS_compound.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_finishing" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAEAAAACAAAAEAAAAA=</HashCode>
+      <FileName>Views\POS_finishing.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_login" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="POS_UWP.Views.POS_login.Login_Response" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Views\POS_login.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAEAAEAA=</HashCode>
+      <FileName>Views\POS_login.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_main" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoQAAQgAIAFgAEAoAAQACEDEEAZAgAAQQAAEDCA=</HashCode>
+      <FileName>Views\POS_main.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_manager" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAIAAAAAAAAAAAAABAQAAAAAAAAAAABAAAAEAACAA=</HashCode>
+      <FileName>Views\POS_manager.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_sale" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEoQSGODGRAwQGFEBABi2UAIEBDACAMARAQAA2AEgEA=</HashCode>
+      <FileName>Views\POS_sale.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_salesearch" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQBIDAAAgAAAEAAAAAABBEAQAhAAAAAAAAEgAAgA=</HashCode>
+      <FileName>Views\POS_salesearch.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_salestatus" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="POS_UWP.Views.POS_salestatus.ProductRate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Views\POS_salestatus.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="POS_UWP.Views.POS_salestatus.SaleSum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Views\POS_salestatus.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAACEMAAAAgAASgAAEIAAAIgACAAAAAAIAAAEAAQAA=</HashCode>
+      <FileName>Views\POS_salestatus.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_setting" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEACAAAIAAFAAAEAABIAQABAABADAAAAQAEAEAAAEA=</HashCode>
+      <FileName>Views\POS_setting.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.Views.POS_starting" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAABAAAAAAAAAAAAAAAgAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Views\POS_starting.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.DBConn.DBConn_Category" Collapsed="true">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAIQIAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>DBConn\DBConn_Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.DBConn.DBConn_Member" Collapsed="true">
+    <Position X="13.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAKAAACAQYAAAAAAAAACAAAEIAAAEAAAAAAABBIA=</HashCode>
+      <FileName>DBConn\DBConn_Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.DBConn.DBConn_MemberTime" Collapsed="true">
+    <Position X="15.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAwAA=</HashCode>
+      <FileName>DBConn\DBConn_MemberTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.DBConn.DBConn_Product" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACIEAAAAAAAQiAAIAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>DBConn\DBConn_Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.DBConn.DBConn_Sale" Collapsed="true">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgIIAAAAAECCAAAAAAIAAAAAABAAAAAAA=</HashCode>
+      <FileName>DBConn\DBConn_Sale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.DBConn.DBConn_SaleHistory" Collapsed="true">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAACAAAAAAAAAABIAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>DBConn\DBConn_SaleHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.DBConn.DBConn_SaleSearch" Collapsed="true">
+    <Position X="12" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACAAEAAAAAAAACAAAAAIAAAAAACAAEAAAAAAAAs=</HashCode>
+      <FileName>DBConn\DBConn_SaleSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.PosDB.Categorys" Collapsed="true">
+    <Position X="12" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>PosDB\Categorys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.PosDB.Member" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAQAAAAAgAAAAQAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PosDB\Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.PosDB.MemberTime" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAABAAAAgAAAAAAACAQAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>PosDB\MemberTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.PosDB.Product" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PosDB\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.PosDB.Sale" Collapsed="true">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAQAAAAAQAAAAAAAACAAAAA=</HashCode>
+      <FileName>PosDB\Sale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.PosDB.SaleHistory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAQIAAAAAIQAAAAAQAAAAAAAACAAAAA=</HashCode>
+      <FileName>PosDB\SaleHistory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="POS_UWP.PosDB.SaleSearch" Collapsed="true">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAAQAAQAAAAAAAAQAAIAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PosDB\SaleSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.PosDB.SaleSearchTemp" Collapsed="true">
+    <Position X="13.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAQAAQAAAAAAAAAAAIQAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PosDB\SaleSearchTemp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.CortanaService" Collapsed="true">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAEAQAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAEI=</HashCode>
+      <FileName>CortanaService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SQLite.SQLiteException" Collapsed="true">
+    <Position X="15.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.NotNullConstraintViolationException" Collapsed="true">
+    <Position X="15.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.SQLiteConnection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEEABACnAiAbrBBAEQAQQCAWIgRoBQYAIgBCAAEU=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SQLite.SQLiteConnectionString" Collapsed="true">
+    <Position X="17.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAgAAAAIAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.TableAttribute" Collapsed="true">
+    <Position X="19.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.ColumnAttribute" Collapsed="true">
+    <Position X="21.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.PrimaryKeyAttribute" Collapsed="true">
+    <Position X="17.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.AutoIncrementAttribute" Collapsed="true">
+    <Position X="17.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.IndexedAttribute" Collapsed="true">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.IgnoreAttribute" Collapsed="true">
+    <Position X="23" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.UniqueAttribute" Collapsed="true">
+    <Position X="13.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.MaxLengthAttribute" Collapsed="true">
+    <Position X="17.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.CollationAttribute" Collapsed="true">
+    <Position X="19.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.NotNullAttribute" Collapsed="true">
+    <Position X="19.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.TableMapping" Collapsed="true">
+    <Position X="21.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAMAAiCgCAUAQgAAAQAAACAAAAgAAAAAACQgAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.Orm" Collapsed="true">
+    <Position X="21.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAECAAAAAAAAAAABgAAAAAAAAAAAwAAAAAAAACAAE=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.SQLiteCommand" Collapsed="true">
+    <Position X="21.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAQAYEAAABAEBBAQAAgAABAAAEEAAACAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.PreparedSqlLiteInsertCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAEAAAACAAQAUAAAAAAEACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SQLite.BaseTableQuery" Collapsed="true">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.TableQuery&lt;T&gt;" Collapsed="true">
+    <Position X="11.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EOAAAAAIAICAAVsAIAAARAQABAGIAWA0AgHAQAAAUJA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SQLite.SQLite3" Collapsed="true">
+    <Position X="19.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIJAgUgAAkgALQsCCBlAAQAUYQAAgQAAMAAACICDBAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.SQLiteAsyncConnection" Collapsed="true">
+    <Position X="13.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAACCIAAAAQAAAASAEACABAAAgIAAABIBAAEMA=</HashCode>
+      <FileName>SQLiteAsync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.AsyncTableQuery&lt;T&gt;" Collapsed="true">
+    <Position X="13.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAAAAAAAAAAgAAACAAAAAkAAAAAAAFAAAAAEQE=</HashCode>
+      <FileName>SQLiteAsync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.CreateTablesResult" Collapsed="true">
+    <Position X="15.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLiteAsync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.SQLiteConnectionPool" Collapsed="true">
+    <Position X="15.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAABAAAAABAEAAAAAAABAAAAAAAAAAAAIABAAAAA=</HashCode>
+      <FileName>SQLiteAsync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SQLite.SQLiteConnectionWithLock" Collapsed="true">
+    <Position X="11.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLiteAsync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.Web" Collapsed="true">
+    <Position X="17.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAIAACgAAAAEAA=</HashCode>
+      <FileName>Web.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="POS_UWP.VCDInstall" Collapsed="true">
+    <Position X="17.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VCDInstall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SQLite.SQLiteOpenFlags" Collapsed="true">
+    <Position X="19.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAACAAAAAAAAAAAAAACAIAACkAIEAAIAAAAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SQLite.CreateFlags" Collapsed="true">
+    <Position X="17.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAAIAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>SQLite.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

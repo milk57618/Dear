@@ -58,7 +58,7 @@ namespace POS_UWP.DBConn
             }
         }
 
-        public List<SaleSearch> ReadAllSaleSearch()
+        public List<SaleSearch> GetAllSaleSearch()
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
@@ -116,6 +116,21 @@ namespace POS_UWP.DBConn
                 dbConn.CreateTable<SaleSearch>();
                 dbConn.Dispose();
                 dbConn.Close();
+            }
+        }
+
+        /* 배열을 받아서 DB에 모두 입력 */
+        public void InsertSaleSearchArray(SaleSearch[] saleSearch)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.RunInTransaction(() =>
+                {
+                    foreach (SaleSearch ss in saleSearch)
+                    {
+                        dbConn.Insert(ss);
+                    }
+                });
             }
         }
     }

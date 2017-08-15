@@ -28,8 +28,7 @@ namespace POS_UWP.Views
         
         private void btn_Send_Click(object sender, RoutedEventArgs e)
         {
-            Web web = new Web();
-            web.sendAS(DateTime.Now.ToString("yy/MM/dd HH:mm:ss"), POS_main.PosId, txtbox_Content.Text);
+            Web.sendAS(DateTime.Now.ToString("yy/MM/dd HH:mm:ss"), POS_main.PosId, txtbox_Content.Text);
             txtbox_Content.Text = "";
         }
     }

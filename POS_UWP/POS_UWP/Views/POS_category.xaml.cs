@@ -50,8 +50,8 @@ namespace POS_UWP.Views
         {
             select_cate = select_value;
             currentcate = Db_Cate.ReadCategorys(select_cate);
-            select_cateS = currentcate.category;
-            txtbox_Category.Text = currentcate.category;
+            select_cateS = currentcate.Category;
+            txtbox_Category.Text = currentcate.Category;
         }
 
         /*페이지 이동*/
@@ -119,7 +119,7 @@ namespace POS_UWP.Views
             if (txtbox_Category.Text != "")
             {
                 currentcate.Id = select_cate;
-                currentcate.category = txtbox_Category.Text;
+                currentcate.Category = txtbox_Category.Text;
 
                 //데이터베이스 값을 업데이트함
                 Db_Cate.UpdateCategory(currentcate);

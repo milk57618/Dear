@@ -30,7 +30,7 @@ namespace POS_UWP.DBConn
         }
 
         //Retrieve the all contact list from the database
-        public List<SaleHistory> ReadAllSaleHistory()
+        public List<SaleHistory> GetAllSaleHistory()
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
@@ -67,6 +67,21 @@ namespace POS_UWP.DBConn
                 dbConn.CreateTable<SaleHistory>();
                 dbConn.Dispose();
                 dbConn.Close();
+            }
+        }
+
+        /* 배열을 받아서 DB에 모두 입력 */
+        public void InsertSaleHistoryArray(SaleHistory[] salehistory)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.RunInTransaction(() =>
+                {
+                    foreach (SaleHistory sh in salehistory)
+                    {
+                        dbConn.Insert(sh);
+                    }
+                });
             }
         }
     }

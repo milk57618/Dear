@@ -447,3 +447,7 @@ D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\
 D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\XamlSaveStateFile.xml
 D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\POS_UWP.exe
 D:\newFolder_sudy\공모전프로젝트\2017공개sw_스마트포스기\POS_UWP\POS_UWP\obj\x86\Debug\POS_UWP.pdb
+C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\bin\x86\Debug\ApiAiSDK.dll
+C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\bin\x86\Debug\Microsoft.ApplicationInsights.dll
+C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\bin\x86\Debug\Microsoft.ApplicationInsights.PersistenceChannel.dll
+C:\Users\myc\Desktop\SW_TEST\POS_UWP\POS_UWP\bin\x86\Debug\Microsoft.ApplicationInsights.Extensibility.Windows.dll

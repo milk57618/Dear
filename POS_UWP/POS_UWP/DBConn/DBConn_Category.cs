@@ -43,6 +43,16 @@ namespace POS_UWP.DBConn
             }
         }
 
+        /*카테고리 테이블 리스트 목록을 불러오는 함수*/
+        public List<Categorys> GetAllCategory()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                List<Categorys> myCollection = dbConn.Table<Categorys>().ToList<Categorys>();
+                return myCollection;
+            }
+        }
+
         /*카테고리 데이터베이스 업데이트*/
         public void UpdateCategory(Categorys cate)
         {
@@ -51,7 +61,7 @@ namespace POS_UWP.DBConn
                 var existing = dbConn.Query<Categorys>("select * from Categorys where Id =" + cate.Id).FirstOrDefault();
                 if (existing != null)
                 {
-                    existing.category = cate.category;  //바꿀 카테고리 값을 원래 있던 카테고리값에 넣어줌
+                    existing.Category = cate.Category;  //바꿀 카테고리 값을 원래 있던 카테고리값에 넣어줌
                     dbConn.RunInTransaction(() =>
                     {
                         dbConn.Update(existing);  //디비 업데이트함
@@ -59,6 +69,7 @@ namespace POS_UWP.DBConn
                 }
             }
         }
+        
 
         /*카테고리 데이터베이스 값 존재하는지 확인하는 함수*/
         public bool SearchCategory(string cate)
@@ -95,14 +106,14 @@ namespace POS_UWP.DBConn
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingCate = dbConn.Query<Categorys>("select * from Categorys where category= '" + cate.category + "'").FirstOrDefault();
+                var existingCate = dbConn.Query<Categorys>("select * from Categorys where category= '" + cate.Category + "'").FirstOrDefault();
                 int count = dbConn.Query<Categorys>("select * from Categorys").Count;
 
                 if (existingCate != null)
                 {
                     dbConn.RunInTransaction(() =>
                     {
-                        dbConn.Query<Categorys>("delete from Product where category= '" + cate.category + "'");
+                        dbConn.Query<Categorys>("delete from Product where category= '" + cate.Category + "'");
                         dbConn.Delete(existingCate);  //카테고리가 존재하면 카테고리 삭제해줌
                     });
                 }
@@ -116,5 +127,31 @@ namespace POS_UWP.DBConn
             }
         }
 
+        /* Category 데이터베이스 값들을 모두 삭제하는 함수 */
+        public void DeleteAllCategory()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.DropTable<Categorys>();
+                dbConn.CreateTable<Categorys>();
+                dbConn.Dispose();
+                dbConn.Close();
+            }
+        }
+
+        /* 배열을 받아서 DB에 모두 입력 */
+        public void InsertCategoryArray(Categorys[] category)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.RunInTransaction(() =>
+                {
+                    foreach (Categorys c in category)
+                    {
+                        dbConn.Insert(c);
+                    }
+                });
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -25,6 +26,15 @@ namespace POS_UWP.Views
 
             if (txtbox_StartPrice.Text != null && txtbox_YesterdayPrice.Text != null)
             {
+                // 스레드를 사용하여 5분마다 웹서버로 DB정보 전송
+                Random r = new Random();
+                var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(300) };
+                timer.Start();
+                timer.Tick += (sender2, args) =>
+                {
+                    Web.sendDataToServer();
+                };
+
                 openCheck = true;
                 Frame.Navigate(typeof(POS_main));
             }
