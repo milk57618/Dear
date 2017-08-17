@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#939393"
+    >
+
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="fill_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="250dp"
+        app:compactCalendarTargetHeight="480dp"
+        app:compactCalendarTextSize="12sp"
+        app:compactCalendarBackgroundColor="#565252"
+        app:compactCalendarTextColor="#fff"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#DF6709"
+        app:compactCalendarCurrentDayBackgroundColor="#939393"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        android:layout_weight="0.96" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="총 금액:"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/Profit"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/Analysis"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"
+            android:layout_height="match_parent"
+            android:text="--" />
+    </LinearLayout>
+
+
+</LinearLayout>
