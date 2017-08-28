@@ -24,8 +24,8 @@ import com.example.eunsol.dear.main.jsonConvert.MemberDataConvert;
 /**
  * Created by econo110 on 2017-05-31.
  */
-@RequiresApi(api = Build.VERSION_CODES.N)
-public class MemberActivity extends AppCompatActivity {
+
+public class MemberActivity extends CustomActivity {
 
     private int posNum;
     private String date;
@@ -35,6 +35,7 @@ public class MemberActivity extends AppCompatActivity {
     private TextView phoneText;
     private TextView wageText;
     private TextView payText;
+    private TextView nameText;
     private MemberDataConvert memberDataConvert;
     private ArrayList<String> MemberName;  //스피너 어댑터에 연결할 데이터
 
@@ -55,6 +56,7 @@ public class MemberActivity extends AppCompatActivity {
         phoneText = (TextView) findViewById(R.id.phone);
         wageText = (TextView) findViewById(R.id.wage);
         payText = (TextView) findViewById(R.id.pay);
+        nameText = (TextView) findViewById(R.id.memName);
 
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(false);
@@ -65,11 +67,14 @@ public class MemberActivity extends AppCompatActivity {
         staffSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                String phone =memberDataConvert.getMemberList().get(position).getPhone();
+
                 posiText.setText(memberDataConvert.getMemberList().get(position).getPosi());
-                phoneText.setText(memberDataConvert.getMemberList().get(position).getPhone());
+                phoneText.setText(phone.substring(0,3)+"-"+phone.substring(3,7)+"-"+phone.substring(7,11));
                 wageText.setText(Integer.toString(memberDataConvert.getMemberList().get(position).getWage())+"원");
                 payText.setText(Integer.toString(memberDataConvert.getMemberList().get(position).getPay())+"원");
-
+                nameText.setText(memberDataConvert.getMemberList().get(position).getName());
             }
 
             @Override
@@ -141,15 +146,16 @@ public class MemberActivity extends AppCompatActivity {
                 MemberName.add(memberDataConvert.getMemberList().get(i).getName());
             }
 
-            ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(MemberActivity.this, android.R.layout.simple_spinner_item, MemberName);
-            dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            ArrayAdapter<String> dataAdapter = new ArrayAdapter<String> (MemberActivity.this, R.layout.custom_spinner,MemberName);
+            dataAdapter.setDropDownViewResource(R.layout.custom_spinner);
             staffSpinner.setPrompt("직원을 선택하세요");
             staffSpinner.setAdapter(dataAdapter);
 
             posiText.setText(memberDataConvert.getMemberList().get(0).getPosi());
             phoneText.setText(memberDataConvert.getMemberList().get(0).getPhone());
-            wageText.setText(Integer.toString(memberDataConvert.getMemberList().get(0).getWage())+"원");
-            payText.setText(Integer.toString(memberDataConvert.getMemberList().get(0).getPay())+"원");
+            wageText.setText(Integer.toString(memberDataConvert.getMemberList().get(0).getWage())+" 원");
+            payText.setText(Integer.toString(memberDataConvert.getMemberList().get(0).getPay())+" 원");
+
         }
     }
 }

@@ -2,7 +2,7 @@ package com.example.eunsol.dear.main.jsonConvert;
 
 import android.util.Log;
 
-import com.example.eunsol.dear.main.PosDB.member;
+import com.example.eunsol.dear.main.DB_Pos.member;
 
 import org.json.JSONArray;
 import org.json.JSONException;

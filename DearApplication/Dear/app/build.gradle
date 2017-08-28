@@ -35,4 +35,6 @@ dependencies {
     compile 'com.github.sundeepk:compact-calendar-view:2.0.2'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     compile 'org.jetbrains:annotations-java5:15.0'
+    compile 'org.altbeacon:android-beacon-library:2+'
+    compile 'com.tsengvn:typekit:1.0.1'
 }

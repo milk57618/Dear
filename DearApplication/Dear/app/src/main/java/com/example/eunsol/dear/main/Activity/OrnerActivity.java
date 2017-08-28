@@ -15,7 +15,7 @@ import com.example.eunsol.dear.R;
 
 public class OrnerActivity extends Activity implements View.OnClickListener{
 
-    Button saleBtn,employeeBtn,settingBtn;
+    Button saleBtn,employeeBtn;
     TextView storeNameText;
     String userID;
     String storeName;
@@ -34,12 +34,10 @@ public class OrnerActivity extends Activity implements View.OnClickListener{
 
         saleBtn = (Button) findViewById(R.id.salesButton);
         employeeBtn = (Button) findViewById(R.id.employeeButton);
-        settingBtn = (Button) findViewById(R.id.settingButton);
         storeNameText= (TextView) findViewById(R.id.textStore);
         //리스너 연결
         saleBtn.setOnClickListener(this);
         employeeBtn.setOnClickListener(this);
-        settingBtn.setOnClickListener(this);
         storeNameText.setText(storeName);
     }
 
@@ -65,8 +63,7 @@ public class OrnerActivity extends Activity implements View.OnClickListener{
                 OrnerActivity.this.startActivity(intent);
                 break;
 
-            case R.id.settingButton:
-                break;
+
         }
 
     }
