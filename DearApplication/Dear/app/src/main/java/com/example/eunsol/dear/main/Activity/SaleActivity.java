@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.eunsol.dear.R;
 import com.example.eunsol.dear.main.DateManager;
-import com.example.eunsol.dear.main.PosDB.saleRank;
+import com.example.eunsol.dear.main.DB_Pos.saleRank;
 import com.example.eunsol.dear.main.Request.SaleRequest;
 import com.example.eunsol.dear.main.jsonConvert.SaleDataConvert;
 import com.github.sundeepk.compactcalendarview.CompactCalendarView;

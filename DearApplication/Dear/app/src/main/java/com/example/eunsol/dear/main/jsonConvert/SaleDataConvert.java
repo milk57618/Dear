@@ -1,8 +1,7 @@
 package com.example.eunsol.dear.main.jsonConvert;
 
-import android.util.Log;
-import com.example.eunsol.dear.main.PosDB.sale;
-import com.example.eunsol.dear.main.PosDB.saleRank;
+import com.example.eunsol.dear.main.DB_Pos.sale;
+import com.example.eunsol.dear.main.DB_Pos.saleRank;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
